@@ -1,0 +1,165 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  @include font;
+
+  position: relative;
+  min-width: 320px;
+  margin: 0 auto;
+  font-family: "PT Mono", "Arial", sans-serif;
+  color: $gray;
+}
+
+.body-black {
+  position: relative;
+
+  &::after {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    content: "";
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+// form {
+//   display: flex;
+//   justify-content: space-between;
+//   flex-wrap: wrap;
+// }
+
+// input {
+//   @include mapa;
+//   @include font(16px, 22px, 400);
+
+//   position: relative;
+//   color: $white;
+//   background-color: rgba($white, 0.1);
+//   transition: 0.5s;
+//   border: none;
+//   -webkit-appearance: none;
+//   -webkit-border-radius: 0;
+
+//   &:focus {
+//     outline: none;
+//     box-shadow: 0 0 4px 6px rgba($white, 0.3);
+//     transition: 0.5s;
+//   }
+
+//   &:hover {
+//     box-shadow: 0 0 0 1px rgba($white, 0.5);
+//   }
+
+//   &::placeholder, {
+//     color: $white;
+//   }
+
+//   &:-moz-submit-invalid {
+//     box-shadow: none;
+//   }
+
+//   &:-moz-ui-invalid {
+//     box-shadow: none;
+//   }
+// }
+
+// .field-invalid {
+//   box-shadow: 0 0 2px 2px red;
+// }
+
+// input[name="letter"] {
+//   width: 100%;
+//   display: flex;
+// }
+
+// input[type="checkbox"] {
+//   width: 0;
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+// }
+
+// label {
+//   @include font(14px, 16px, 400);
+
+//   display: flex;
+//   align-items: center;
+//   margin: 0;
+//   color: rgba($white, 0.8);
+// }
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+// .button {
+//   font-family: "Roboto Condensed", "Arial", sans-serif;
+//   text-transform: uppercase;
+//   text-align: center;
+//   transition: 0.5s;
+//   border-radius: 5px;
+//   display: block;
+//   position: relative;
+//   z-index: 3;
+//   cursor: pointer;
+// }
+
+// .questions .container {
+//   max-width: 1220px;
+// }
+
+// .company .container,
+// .advantage .container {
+//   @media (max-width: $mobile-width-only) {
+//     width: 100%;
+//     max-width: 100%;
+//     padding: 0 14px;
+//   }
+// }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (max-width: $tablet-width-only) {
+    max-width: 768px;
+    padding: 0 24px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 320px;
+    max-width: 400px;
+    padding: 0 14px;
+  }
+}
