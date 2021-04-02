@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="Печатные платы">
-    <meta name="Description" content="Товар: Печатные платы. Производство и монтаж, поставка комплектующих, блоков и модулей">
+    <meta name="keywords" content="Jewelry Chjewellery">
+    <meta name="Description" content="Product: Jewelry. Jewelry store Chjewellery. ">
 
-    <link rel="preload" href="fonts/roboto-v20-latin_cyrillic-500.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/pt-mono-v8-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 
-    <title>Ювелирные украшения</title>
+    <title>Chjewellery</title>
     <link rel="stylesheet" href="css/style.min.css">
 
     <script>
@@ -22,12 +24,146 @@
   </head>
 
   <body>
-    <h1>Ювелирные украшения</h1>
-<!--     <div style="display:none">
+    <h1 class="visually-hidden">Jewelry store Chjewellery</h1>
+
+    <div style="display:none">
       <include src="build/img/sprite_auto.svg"></include>
     </div>
- -->
+
+    <header class="page-header page-header--closed page-header--nojs">
+      <div class="page-header__wrapper">
+        <div class="page-header__first-box">
+          <form>
+            <label class="visually-hidden" for="search">Site search</label>
+            <input type="search" name="search" placeholder="Type here to search">
+          </form>
+          <div class="page-header__wrapper-logo">
+            <a href="#" aria-label="Logotype Chjewellery">
+              <svg role="img" class="page-header__icon-logo" width="66" height="66">
+                <use xlink:href="#icon-envelope"></use>
+              </svg>
+            </a>
+          </div>
+          <ul class="page-header__list">
+            <li class="page-header__item">Login</li>
+            <li class="page-header__item">Cart<span>0</span></li>
+          </ul>
+          <navigation class="page-header__nav">
+            <ul class="page-header__list-nav">
+              <li class="page-header__item-nav">
+                <a href="#">What’s new</a>
+              </li>
+              <li class="page-header__item-nav">
+                <a href="#">Chokers</a>
+              </li>
+              <li class="page-header__item-nav">
+                <a href="#">Necklaces</a>
+              </li>
+              <li class="page-header__item-nav">
+                <a href="#">Rings</a>
+              </li>
+              <li class="page-header__item-nav">
+                <a href="#">Earrings</a>
+              </li>
+            </ul>
+          </navigation>
+        </div>
+
+        <div class="page-header__second-box">
+          <p>PERFECTION</p>
+          <p>made to be yours</p>
+        </div>
+      </div>
+    </header>
+
+    <main></main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="page-footer__wrapper">
+
+          <div class="page-footer__box">
+            <div class="age-footer__box-wrapper">
+              <p>The good stuff in your inbox</p>
+              <p>News and updates from CH. No spam, we promise.</p>
+              <form>
+                <label class="visually-hidden" for="email">Your e-mail</label>
+                <input type="email" name="email" placeholder="Your E-mail">
+                <button class="button" type="submit" aria-label="Send form" tabindex="55">Sign Up</button>
+              </form>
+            </div>
+          </div>
+
+          <ul class="page-footer__list">
+            <li class="page-footer__item">
+              <a href="#">Ordering & Payment</a>
+            </li>
+            <li class="page-footer__item">
+              <a href="#">Terms & Conditions</a>
+            </li>
+            <li class="page-footer__item">
+              <a href="#">Returns & Exchanges</a>
+            </li>
+            <li class="page-footer__item">
+              <a href="#">Delivery</a>
+            </li>
+          </ul>
+
+          <ul class="page-footer__list">
+            <li class="page-footer__item">
+              <a href="#">About CH</a>
+            </li>
+            <li class="page-footer__item">
+              <a href="#">Stores & Hours</a>
+            </li>
+            <li class="page-footer__item">
+              <a href="#">Jobs</a>
+            </li>
+            <li class="page-footer__item">
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+
+          <ul class="page-footer__list-social">
+            <li class="page-footer__item-social">
+              <a href="#" aria-label="We in Facebook">
+                <svg role="img" class="page-footer__icon-face" width="8" height="15">
+                  <use xlink:href="#icon-face"></use>
+                </svg>
+                <p>Facebook</p>
+              </a>
+            </li>
+            <li class="page-footer__item-social">
+              <a href="#" aria-label="We in Instagram">
+                <svg role="img" class="page-footer__icon-insta" width="15" height="15">
+                  <use xlink:href="#icon-insta"></use>
+                </svg>
+                <p>Instagram</p>
+              </a>
+            </li>
+            <li class="page-footer__item-social">
+              <a href="#" aria-label="We in Pinterest">
+                <svg role="img" class="page-footer__icon-pint" width="15" height="15">
+                  <use xlink:href="#icon-pint"></use>
+                </svg>
+                <p>Pinterest</p>
+              </a>
+            </li>
+            <li class="page-footer__item-social">
+              <a href="#" aria-label="We in Twitter">
+                <svg role="img" class="page-footer__icon-twit" width="15" height="13">
+                  <use xlink:href="#icon-twit"></use>
+                </svg>
+                <p>Twitter</p>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </footer>
 
     <script src="js/main.js"></script>
+
   </body>
 </html>
