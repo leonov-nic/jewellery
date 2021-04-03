@@ -1,3 +1,10 @@
+// * {
+//   outline: 1px solid red;
+// }
+
+
+
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -45,40 +52,41 @@ a {
 //   flex-wrap: wrap;
 // }
 
-// input {
-//   @include mapa;
-//   @include font(16px, 22px, 400);
+input {
+  @include mapa;
+  @include font(16px, 22px, 400);
 
-//   position: relative;
-//   color: $white;
-//   background-color: rgba($white, 0.1);
-//   transition: 0.5s;
-//   border: none;
-//   -webkit-appearance: none;
-//   -webkit-border-radius: 0;
+  position: relative;
+  border-radius: 21px;
+  border: none;
+  color: $black;
+  background-color: rgba($white, 0);
+  transition: 0.5s;
+  padding: 12px 30px;
 
-//   &:focus {
-//     outline: none;
-//     box-shadow: 0 0 4px 6px rgba($white, 0.3);
-//     transition: 0.5s;
-//   }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 4px 6px rgba($white, 0.3);
+    transition: 0.5s;
+  }
 
-//   &:hover {
-//     box-shadow: 0 0 0 1px rgba($white, 0.5);
-//   }
+  &:hover {
+    box-shadow: 0 0 0 1px rgba($white, 0.5);
+  }
 
-//   &::placeholder, {
-//     color: $white;
-//   }
+  &::placeholder, {
+    color: $gray;
+    @include font(14px, 21px, 500);
+  }
 
-//   &:-moz-submit-invalid {
-//     box-shadow: none;
-//   }
+  &:-moz-submit-invalid {
+    box-shadow: none;
+  }
 
-//   &:-moz-ui-invalid {
-//     box-shadow: none;
-//   }
-// }
+  &:-moz-ui-invalid {
+    box-shadow: none;
+  }
+}
 
 // .field-invalid {
 //   box-shadow: 0 0 2px 2px red;
