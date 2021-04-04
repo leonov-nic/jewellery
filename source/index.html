@@ -30,16 +30,25 @@
       <include src="build/img/sprite_auto.svg"></include>
     </div>
 
-    <header class="page-header page-header--closed page-header--nojs">
+    <header class="page-header page-header--opened page-header--nojs">
       <div class="page-header__wrapper">
         <div class="page-header__first-box">
+          <button class="page-header__toggle" type="button" aria-label="Открыть меню">
+            <svg role="img" class="page-header__icon-close" width="14" height="14">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+            <svg role="img" class="page-header__icon-menu" width="25" height="16">
+              <use xlink:href="#icon-menu"></use>
+            </svg>
+          </button>
+
           <form>
             <label class="visually-hidden" for="search">Site search</label>
             <input type="search" name="search" placeholder="Type here to search">
           </form>
 
           <div class="page-header__wrapper-logo">
-            <a href="#" aria-label="Logotype Chjewellery">
+            <a class="page-header__logo" href="#" aria-label="Logotype Chjewellery">
               <svg role="img" class="page-header__icon-logo" width="66" height="66">
                 <use xlink:href="#icon-logo"></use>
               </svg>
@@ -47,11 +56,18 @@
           </div>
 
           <ul class="page-header__list-log">
-            <li class="page-header__item-log">
+            <li class="page-header__item-log page-header__item-log--none">
               <a href="#">Login</a>
             </li>
             <li class="page-header__item-log">
-              <a href="#">Cart<span>0</span></a>
+              <a href="#">
+                <p class="page-header__cart">Cart<span>0</span></p>
+                <button class="page-header__toggle" type="button" aria-label="Open cart">
+                  <svg role="img" class="page-header__icon-input" width="20" height="18">
+                    <use xlink:href="#icon-input"></use>
+                  </svg>
+                </button>
+              </a>
             </li>
           </ul>
         </div>
@@ -104,15 +120,13 @@
         <div class="page-footer__wrapper">
 
           <div class="page-footer__box">
-            <div class="page-footer__box-wrapper">
-              <p>The good stuff in your inbox</p>
-              <p>News and updates from CH. No spam, we promise.</p>
-              <form>
-                <label class="visually-hidden" for="email">Your e-mail</label>
-                <input type="email" name="email" placeholder="Your E-mail">
-                <button class="button" type="submit" aria-label="Send form" tabindex="55">Sign Up</button>
-              </form>
-            </div>
+            <p>The good stuff in your inbox</p>
+            <p>News and updates from CH. No spam, we promise.</p>
+            <form>
+              <label class="visually-hidden" for="email">Your e-mail</label>
+              <input type="email" name="email" placeholder="Your E-mail">
+              <button class="button" type="submit" aria-label="Send form">Sign Up</button>
+            </form>
           </div>
 
           <ul class="page-footer__list">

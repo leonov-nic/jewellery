@@ -3,8 +3,6 @@
 // }
 
 
-
-
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -64,11 +62,11 @@ input {
   transition: 0.5s;
   padding: 12px 30px;
 
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 4px 6px rgba($white, 0.3);
-    transition: 0.5s;
-  }
+  // &:focus {
+  //   outline: none;
+  //   box-shadow: 0 0 4px 6px rgba($white, 0.3);
+  //   transition: 0.5s;
+  // }
 
   &:hover {
     box-shadow: 0 0 0 1px rgba($white, 0.5);
