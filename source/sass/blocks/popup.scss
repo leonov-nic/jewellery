@@ -1,0 +1,198 @@
+.popup-log {
+  position: fixed;
+  left: calc(50% - 215px);
+  top: 100px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 430px;
+  padding: 198px 45px 60px;
+  background-image: url("../img/log-in@1x.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: $popup-bg;
+}
+
+.popup-log form {
+  width: 100%;
+}
+
+.popup-log h2 {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  @include font(34px, 44px, 700);
+
+  margin: 0 auto;
+  color: $black;
+}
+
+.popup-log input {
+  padding: 10px 16px 10px 0;
+  margin-top: 30px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 0;
+  border-bottom: 1px solid $black;
+  transition: 0.5s;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 8px 0 0 rgba($brown, 0.5);
+  }
+
+  &:hover {
+    border-color: $brown;
+    box-shadow: 0 2px 0 0 $brown;
+  }
+}
+
+.popup-log a {
+  @include font(12px, 18px, 500);
+
+  color: $gray;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  display: block;
+  text-align: right;
+  width: 100%;
+  transition: 0.5s;
+
+  &:focus {
+    outline: none;
+    color: $black;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    color: $brown;
+    text-decoration: none;
+  }
+}
+
+.popup-log__box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.popup-log__box p {
+  @include font(14px, 21px, 500);
+  color: $gray;
+  margin: 0;
+  // width: 70%;
+}
+
+.popup-log__box a {
+  @include font(14px, 21px, 500);
+  color: $black;
+  margin: 0;
+  padding: 0;
+  padding-left: 5px;
+  display: block;
+  text-align-last: left;
+  transition: 0.5s;
+  width: 20%;
+
+  &:hover {
+    color: $brown;
+  }
+}
+
+.popup-log .button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  padding: 28px 0;
+  background-color: $brown;
+  color: $white;
+  transition: 0.5s;
+
+  &:hover {
+    color: $brown;
+    background-color: $gray;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px 7px rgba($brown, 0.3);
+    transition: 0.5s;
+  }
+}
+
+.popup__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 17px;
+  height: 17px;
+  border: none;
+  background: none;
+  background-image: url("../img/icon-close.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.5s;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -5px;
+    right: -5px;
+    left: -5px;
+    bottom: -5px;
+  }
+
+  &:hover {
+    opacity: 0.4;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 4px 6px rgba($white, 0.3);
+  }
+}
+
+
+.popup__field-box {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  width: 90%;
+  padding-top: 35px;
+}
+
+@keyframes modal-in {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(20px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.popup-show {
+  display: block;
+  animation-name: modal-in;
+  animation-duration: 0.6s;
+}

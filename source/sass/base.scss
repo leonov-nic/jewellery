@@ -68,9 +68,9 @@ input {
   //   transition: 0.5s;
   // }
 
-  &:hover {
-    box-shadow: 0 0 0 1px rgba($white, 0.5);
-  }
+  // &:hover {
+  //   box-shadow: 0 0 0 1px rgba($white, 0.5);
+  // }
 
   &::placeholder, {
     color: $gray;

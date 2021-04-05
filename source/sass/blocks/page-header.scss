@@ -8,7 +8,7 @@
   flex-wrap: wrap;
 
   @media (max-width: $tablet-width-only) {
-    background-color: $brown;
+    background-color: $white;
   }
 }
 
@@ -33,11 +33,20 @@
     padding-left: 45px;
     padding-right: 45px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 form {
   @media (max-width: $tablet-width-only) {
+    position: relative;
+    z-index: 100;
     margin: 0 auto;
+    padding-top: 10px;
     order: 3;
     width: 100%;
     display: none;
@@ -53,24 +62,31 @@ form {
   &:focus {
     border-radius: 21px;
     outline: none;
-    box-shadow: 0 0 10px 10px rgba($gray, 0.8);
+    box-shadow: 0 0 6px 6px rgba($gray, 0.3);
+    background-position: 5px center;
   }
 
   &:hover {
-    box-shadow: 0 0 0 1px $gray-light;
+    box-shadow: 0 0 5px 5px rgba($gray, 0.2);
     background-position: 5px center;
   }
 
   @media (max-width: $tablet-width-only) {
     width: 678px;
     margin: 0 auto;
+    padding: 10px 30px;
     background-image: url("../img/icon-loupe-white.svg");
     background-position: 12px center;
+    background-size: 17px 17px;
     background-color: rgba($white, 0.15);
 
     &::placeholder {
       color: transparent;
     }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 9px 30px;
   }
 }
 
@@ -83,7 +99,7 @@ form {
 
 .page-header__item-log {
   &:first-child {
-    margin-right: 35px;
+    margin-right: 37px;
   }
 }
 
@@ -114,20 +130,31 @@ form {
   }
 }
 
+.page-header__icon-input {
+  fill: $black;
+}
+
 .page-header__nav {
   width: 100%;
-  padding: 25px 0;
+  padding: 25px 0 17px;
   border-top: 1px solid $gray-light;
   border-bottom: 1px solid rgba($gray-light, 0);
 
   @media (max-width: $tablet-width-only) {
     display: none;
     margin-top: 55px;
-    padding-top: 55px;
-    padding-left: 45px;
+    padding-top: 50px;
+    padding-left: 30px;
     padding-right: 45px;
     border-top: none;
     border-bottom: none;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 60px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
   }
 }
 
@@ -136,8 +163,9 @@ form {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0;
+  padding-left: 14px;
   margin: 0 auto;
-  width: 493px;
+  width: 505px;
 
   @media (max-width: $tablet-width-only) {
     width: 100%;
@@ -148,24 +176,36 @@ form {
 
 .page-header__item-nav {
   @media (max-width: $tablet-width-only) {
-    margin-bottom: 40px;
+    margin-bottom: 21px;
   }
 }
 
 .page-header__list-tablet {
   display: none;
   padding: 0;
+  padding-left: 14px;
+  padding-top: 5px;
+  padding-bottom: 30px;
 
   @media (max-width: $tablet-width-only) {
     display: block;
   }
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 10px;
+    margin: 0;
+  }
 }
 
 .page-header__item-tablet {
-  margin-bottom: 30px;
+  margin-bottom: 18px;
 
   &:last-child  {
     padding-top: 25px;
+
+    @media (max-width: $tablet-width-only) {
+      padding-top: 15px;
+    }
   }
 }
 
@@ -184,6 +224,7 @@ form {
 .page-header__list-log a,
 .page-header__list-nav a {
   position: relative;
+  display: block;
   transition: 0.7s;
   margin: 0;
   padding: 0;
@@ -217,7 +258,6 @@ form {
     @media (max-width: $tablet-width-only) {
       color: $gray;
     }
-
   }
 
   @media (max-width: $tablet-width-only) {
@@ -226,15 +266,49 @@ form {
   }
 }
 
+.page-header__item-log p {
+  margin: 0;
+  padding: 0;
+}
+
 .page-header__wrapper-logo {
   width: 66px;
-  margin-right: 120px;
-  padding-top: 30px;
-  padding-bottom: 18px;
+  margin-right: 142px;
+  padding-top: 35px;
+  padding-bottom: 13px;
 
   @media (max-width: $tablet-width-only) {
+    padding-top: 30px;
     padding-bottom: 30px;
     margin-right: 0;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 52px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.page-header__icon-logo {
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(1.2);
+    stroke: $brown;
+    transition: 0.5s;
+  }
+
+  &:active {
+    transform: scale(1.2);
+    stroke: $brown;
+    transition: 0.2s;
+    opacity: 0.3;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 52px;
+    height: 52px;
   }
 }
 
@@ -283,16 +357,35 @@ form {
 .page-header__second-box p {
   width: 100%;
   margin: 0;
+  padding: 0;
   font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-style: italic;
+  font-weight: normal;
+  @include font(33px, 48px, 400);
 
-  @include font(38px, 50px, 400);
   text-align: center;
   color: $white;
 
+  @media (max-width: $mobile-width-only) {
+    @include font(30px, 42px, 400);
+  }
+
   &:first-child {
-    @include font(45px, 58px, 700);
+    @include font(45px, 50px, 700);
+
+    letter-spacing: 0.03em;
+    font-style: normal;
+
+    @media (max-width: $mobile-width-only) {
+      @include font(38px, 40px, 700);
+
+      padding-top: 7px;
+    }
   }
 }
+
+
+
 
 
 
@@ -313,29 +406,13 @@ form {
     position: relative;
   }
 
-  .page-header__icon-close,
-  .page-header__icon-menu {
-    position: absolute;
-    left: -5;
-    top: 0;
+  .page-header__toggle--menu {
+    margin-left: -7px;
   }
 
-  .page-header__icon-close {
-    width: 14px;
-    height: 14px;
-    left: 5px;
-    top: 1px;
-  }
-
-  .page-header__icon-menu {
-    position: absolute;
-    // top: 0;
-    // left: 10px;
-    z-index: 100;
-    width: 25px;
-    height: 16px;
-
-    display: block;
+  .page-header__toggle--input {
+    margin-right: -5px;
+    margin-left: 5px;
   }
 
   .page-header--nojs {
@@ -349,32 +426,37 @@ form {
 
     .page-header__nav {
       position: relative;
-
       display: block;
     }
   }
 
   .page-header--closed {
-    .page-header__icon-close {
-      display: none;
-    }
-
     .page-header__icon-menu {
       display: block;
+      fill: $black;
+    }
+
+    .page-header__icon-logo {
+      fill: $brown;
+    }
+
+    .page-header__icon-input {
+      fill: $black;
     }
   }
 
   .page-header--opened {
-    .page-header__icon-close {
-      display: block;
-    }
-
-    .page-header__icon-menu {
-      display: none;
+    .page-header__wrapper {
+      background-color: $brown;
+      transition: 0.2s;
     }
 
     form {
       display: flex;
+    }
+
+    .page-header__icon-input {
+      fill: $white;
     }
 
     .page-header__nav {
@@ -389,7 +471,7 @@ form {
 
   @keyframes menu {
     0% {
-      transform: translateX(-700px);
+      transform: translateX(-500px);
     }
 
     0% {
@@ -407,7 +489,7 @@ form {
 
   @keyframes menu-search {
     0% {
-      transform: translateY(-60px);
+      transform: translateY(-40px);
     }
 
     0% {

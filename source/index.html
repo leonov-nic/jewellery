@@ -11,6 +11,7 @@
     <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/cormorant-garamond-v10-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/cormorant-garamond-v10-latin-600.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/cormorant-garamond-v10-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 
@@ -30,14 +31,11 @@
       <include src="build/img/sprite_auto.svg"></include>
     </div>
 
-    <header class="page-header page-header--opened page-header--nojs">
+    <header class="page-header page-header--closed page-header--nojs">
       <div class="page-header__wrapper">
         <div class="page-header__first-box">
-          <button class="page-header__toggle" type="button" aria-label="Открыть меню">
-            <svg role="img" class="page-header__icon-close" width="14" height="14">
-              <use xlink:href="#icon-close"></use>
-            </svg>
-            <svg role="img" class="page-header__icon-menu" width="25" height="16">
+          <button class="page-header__toggle page-header__toggle--menu" type="button" aria-label="Открыть меню">
+            <svg role="img" class="page-header__icon-menu" width="25" height="18">
               <use xlink:href="#icon-menu"></use>
             </svg>
           </button>
@@ -59,10 +57,10 @@
             <li class="page-header__item-log page-header__item-log--none">
               <a href="#">Login</a>
             </li>
-            <li class="page-header__item-log">
+            <li class="page-header__item-log page-header__item-log--hover">
               <a href="#">
                 <p class="page-header__cart">Cart<span>0</span></p>
-                <button class="page-header__toggle" type="button" aria-label="Open cart">
+                <button class="page-header__toggle page-header__toggle--input" type="button" aria-label="Open cart">
                   <svg role="img" class="page-header__icon-input" width="20" height="18">
                     <use xlink:href="#icon-input"></use>
                   </svg>
@@ -144,7 +142,7 @@
             </li>
           </ul>
 
-          <ul class="page-footer__list page-footer__list--width">
+          <ul class="page-footer__list page-footer__list--second">
             <li class="page-footer__item">
               <a href="#">About CH</a>
             </li>
@@ -197,6 +195,27 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup-log">
+      <h2>Log In</h2>
+      <form action="echo/htmlacademy.ru" method="POST" enctype="multipart/form-data">
+        <label class="visually-hidden" for="mail">Your e-mail</label>
+        <input type="email" name="mail" id="mail" placeholder="Your E-mail" required>
+
+        <label class="visually-hidden" for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <a href="#">Forgot your password?</a>
+
+        <button class="button" type="submit" aria-label="Send form">Log In</button>
+      </form>
+
+      <div class="popup-log__box">
+        <p>Don’t have an account?</p>
+        <a href="#">Sign up</a>
+      </div>
+      <button class="popup__close" type="button" aria-label="Close form"></button>
+    </div>
+
 
     <script src="js/main.js"></script>
 
