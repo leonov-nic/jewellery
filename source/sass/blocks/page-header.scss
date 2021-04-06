@@ -44,7 +44,7 @@
 form {
   @media (max-width: $tablet-width-only) {
     position: relative;
-    z-index: 100;
+    z-index: 50;
     margin: 0 auto;
     padding-top: 10px;
     order: 3;
@@ -463,7 +463,7 @@ form {
       position: absolute;
       top: 117px;
       left: 0;
-      z-index: 99;
+      z-index: 49;
       background-color: $brown;
       display: block;
     }
