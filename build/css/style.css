@@ -475,94 +475,6 @@ input {
       width: 320px;
       padding: 0 15px; } }
 
-.new__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%; }
-
-.new p {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-  text-align: center;
-  width: 100%;
-  margin: 0;
-  color: #1d1613; }
-  .new p:first-child {
-    font-size: 34px;
-    line-height: 44px;
-    font-weight: 700;
-    font-family: "Cormorant Garamond", "Times New Roman", serif; }
-
-.swiper-slide img {
-  display: block;
-  margin: 0;
-  padding: 0;
-  width: 100%; }
-
-.swiper-container {
-  width: 100%; }
-
-.swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  line-height: 20px;
-  font-size: 12px;
-  color: #000;
-  opacity: 1;
-  background: rgba(0, 0, 0, 0); }
-
-.swiper-pagination-bullet-active {
-  color: #fff;
-  background: #007aff; }
-
-.swiper-button-nex,
-.swiper-button-pre {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 100;
-  width: 17px;
-  height: 17px;
-  background-image: url("../img/icon-close.svg");
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.swiper-button-pre {
-  right: auto;
-  left: 0;
-  background-image: url("../img/icon-close.svg"); }
-
-.swiper-container button {
-  background: none;
-  outline: none; }
-
-.swiper-container {
-  width: 100%;
-  height: 100%; }
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
 .page-header ul {
   list-style: none; }
 
@@ -915,14 +827,14 @@ input {
   font-family: "Cormorant Garamond", "Times New Roman", serif;
   font-style: italic;
   font-weight: normal;
-  font-size: 33px;
+  font-size: 38px;
   line-height: 48px;
-  font-weight: 400;
+  font-weight: 0;
   text-align: center;
   color: #ffffff; }
   @media (max-width: 767px) {
     .page-header__second-box p {
-      font-size: 30px;
+      font-size: 34px;
       line-height: 42px;
       font-weight: 400; } }
   .page-header__second-box p:first-child {
@@ -1619,3 +1531,187 @@ footer {
           animation-name: modal-in;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s; }
+
+.swiper {
+  padding: 120px 0 100px; }
+  @media (max-width: 1023px) {
+    .swiper {
+      padding: 70px 0 80px; } }
+  @media (max-width: 767px) {
+    .swiper {
+      padding: 60px 0 80px; } }
+
+.swiper__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%; }
+
+.swiper__box p {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  color: #1d1613;
+  font-size: 34px;
+  line-height: 44px;
+  font-weight: 700;
+  font-family: "Cormorant Garamond", "Times New Roman", serif; }
+
+.swiper__box a {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  position: relative;
+  text-align: center;
+  color: #1d1613;
+  margin: 0 auto;
+  padding-top: 25px; }
+  .swiper__box a:hover {
+    background-color: #a87b62; }
+  @media (max-width: 1023px) {
+    .swiper__box a {
+      padding-top: 20px; } }
+  .swiper__box a::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #a87b62;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
+    .swiper__box a::after:hover {
+      background-color: #9b9997; }
+    @media (max-width: 1023px) {
+      .swiper__box a::after {
+        bottom: -5px; } }
+
+.swiper-slide img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+  @media (max-width: 1023px) {
+    .swiper-slide img {
+      width: 324px;
+      height: auto; } }
+  @media (max-width: 767px) {
+    .swiper-slide img {
+      width: 130px; } }
+
+.swiper-slide h3 {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #1d1613;
+  margin: 0;
+  padding: 0;
+  padding-top: 21px; }
+  @media (max-width: 767px) {
+    .swiper-slide h3 {
+      padding-top: 16px; } }
+
+.swiper-slide p {
+  margin: 0;
+  padding-top: 6px;
+  color: #1d1613;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700; }
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  line-height: 20px;
+  color: #9B9997;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0); }
+  @media (max-width: 1023px) {
+    .swiper-pagination-bullet {
+      width: 15px;
+      height: 15px; } }
+
+.swiper-pagination-bullet-active {
+  color: #1d1613; }
+
+.swiper-button-nex,
+.swiper-button-pre {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 30px;
+  height: 10px;
+  background-image: url("../img/icon-right-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer; }
+  @media (max-width: 1023px) {
+    .swiper-button-nex,
+    .swiper-button-pre {
+      width: 37px;
+      height: 16px;
+      background-image: url("../img/icon-right-tablet.svg"); } }
+  @media (max-width: 1023px) {
+    .swiper-button-nex,
+    .swiper-button-pre {
+      display: none; } }
+
+.swiper-button-pre {
+  right: auto;
+  left: 0;
+  background-image: url("../img/icon-left-desktop.svg");
+  cursor: pointer; }
+  @media (max-width: 1023px) {
+    .swiper-button-pre {
+      background-image: url("../img/icon-left-tablet.svg"); } }
+
+.swiper-container button {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 10px;
+  cursor: pointer; }
+
+.swiper-wrapper {
+  min-height: 435px; }
+  @media (max-width: 1023px) {
+    .swiper-wrapper {
+      min-height: 482px; } }
+  @media (max-width: 767px) {
+    .swiper-wrapper {
+      min-height: 285px; } }
+
+.swiper-container {
+  width: 100%;
+  padding-top: 105px;
+  margin-top: -46px; }
+  @media (max-width: 1023px) {
+    .swiper-container {
+      padding-top: 97px;
+      margin-top: -43px; } }
+  @media (max-width: 767px) {
+    .swiper-container {
+      padding-top: 87px; } }
+
+.swiper-slide {
+  width: 270px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }

@@ -125,11 +125,38 @@
 
 
   var swiper = new Swiper('.swiper-container', {
-    spaceBetween: 28,
+    spaceBetween: 30,
     slidesPerView: 4,
     slidesPerGroup: 4,
     loopFillGroupWithBlank: true,
-    centeredSlides: true,
+    // centeredSlides: true,
+
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        pagination: {
+          type: 'fraction'
+        },
+
+        renderCustom: function (swiper, current, total) {
+          return current + ' 55 ' + total;
+        },
+
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesPerView: 2,
+        slidesPerGroup: 2
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 30
+      }
+    },
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
@@ -148,6 +175,6 @@
   });
 
 
-
-
 })();
+
+// swiper.update();

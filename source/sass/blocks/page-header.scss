@@ -361,13 +361,13 @@ form {
   font-family: "Cormorant Garamond", "Times New Roman", serif;
   font-style: italic;
   font-weight: normal;
-  @include font(33px, 48px, 400);
+  @include font(38px, 48px, 00);
 
   text-align: center;
   color: $white;
 
   @media (max-width: $mobile-width-only) {
-    @include font(30px, 42px, 400);
+    @include font(34px, 42px, 400);
   }
 
   &:first-child {

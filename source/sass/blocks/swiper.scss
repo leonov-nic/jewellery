@@ -1,0 +1,200 @@
+.swiper {
+  padding: 120px 0 100px;
+
+  @media (max-width: $tablet-width-only) {
+    padding: 70px 0 80px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 60px 0 80px;
+  }
+}
+
+.swiper__box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.swiper__box p {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  color: $black;
+
+  @include font(34px, 44px, 700);
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+}
+
+.swiper__box a {
+  @include font(16px, 20px, 500);
+
+  position: relative;
+  text-align: center;
+  color: $black;
+  margin: 0 auto;
+  padding-top: 25px;
+
+  &:hover {
+    background-color: $brown;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 20px;
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $brown;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: $gray;
+    }
+
+    @media (max-width: $tablet-width-only) {
+      bottom: -5px;
+    }
+  }
+}
+
+.swiper-slide img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  @media (max-width: $tablet-width-only) {
+    width: 324px;
+    height: auto;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 130px;
+  }
+}
+
+.swiper-slide h3 {
+  @include font(16px, 21px, 500);
+
+  color: $black;
+  margin: 0;
+  padding: 0;
+  padding-top: 21px;
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 16px;
+  }
+}
+.swiper-slide p {
+  margin: 0;
+  padding-top: 6px;
+  color: $black;
+
+  @include font(14px, 18px, 700);
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  line-height: 20px;
+  color: #9B9997;
+  @include font(16px, 21px, 500);
+
+  opacity: 1;
+  background: rgba(0, 0, 0, 0);
+
+  @media (max-width: $tablet-width-only) {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  color:$black;
+}
+
+.swiper-button-nex,
+.swiper-button-pre {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 30px;
+  height: 10px;
+  background-image: url("../img/icon-right-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width-only) {
+    width: 37px;
+    height: 16px;
+    background-image: url("../img/icon-right-tablet.svg");
+  }
+
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
+}
+
+.swiper-button-pre {
+  right: auto;
+  left: 0;
+  background-image: url("../img/icon-left-desktop.svg");
+  cursor: pointer;
+
+  @media (max-width: $tablet-width-only) {
+    background-image: url("../img/icon-left-tablet.svg");
+  }
+}
+
+.swiper-container button {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.swiper-wrapper {
+  min-height: 435px;
+
+  @media (max-width: $tablet-width-only) {
+    min-height: 482px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    min-height: 285px;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  padding-top: 105px;
+  margin-top: -46px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 97px;
+    margin-top: -43px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 87px;
+  }
+}
+
+.swiper-slide {
+  width: 270px;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
