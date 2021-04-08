@@ -124,27 +124,44 @@
 
 
 
+
+  $(document).ready(function() {
+
+    var openItems = function () {
+      $(".faq__item p").slideUp(200).removeClass('faq__item--opened');
+      $(".faq__item").removeClass('faq__item--opened');
+      $(".faq__item").addClass('faq__item--closed');
+
+      $(this).children('p').slideDown(200).removeClass('faq__item--closed');
+      $(this).removeClass('faq__item--closed');
+      $(this).addClass('faq__item--opened');
+    }
+
+    $(".faq__item").off("click");
+    $(".faq__item").on("click", openItems);
+  });
+
+
+
+
+
   var swiper = new Swiper('.swiper-container', {
     spaceBetween: 30,
     slidesPerView: 4,
     slidesPerGroup: 4,
     loopFillGroupWithBlank: true,
     // centeredSlides: true,
-
+    breakpointsInverse: true,
     breakpoints: {
       320: {
         slidesPerView: 2,
         spaceBetween: 30,
         slidesPerView: 2,
         slidesPerGroup: 2,
+
         pagination: {
           type: 'fraction'
         },
-
-        renderCustom: function (swiper, current, total) {
-          return current + ' 55 ' + total;
-        },
-
       },
       768: {
         slidesPerView: 2,
@@ -176,5 +193,10 @@
 
 
 })();
+
+// renderCustom: function (swiper, current, total) {
+//   return current + ' of ' + total;
+//   swiper.update();
+// },
 
 // swiper.update();

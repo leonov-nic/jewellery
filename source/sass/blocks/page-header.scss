@@ -136,7 +136,7 @@ form {
 
 .page-header__nav {
   width: 100%;
-  padding: 25px 0 17px;
+  padding: 19px 0 17px;
   border-top: 1px solid $gray-light;
   border-bottom: 1px solid rgba($gray-light, 0);
 
@@ -274,8 +274,8 @@ form {
 .page-header__wrapper-logo {
   width: 66px;
   margin-right: 142px;
-  padding-top: 35px;
-  padding-bottom: 13px;
+  padding-top: 37px;
+  padding-bottom: 18px;
 
   @media (max-width: $tablet-width-only) {
     padding-top: 30px;
@@ -371,7 +371,7 @@ form {
   }
 
   &:first-child {
-    @include font(45px, 50px, 700);
+    @include font(45px, 51px, 700);
 
     letter-spacing: 0.03em;
     font-style: normal;

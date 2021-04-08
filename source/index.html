@@ -119,7 +119,7 @@
 
           <div class="swiper__box">
             <p>New In</p>
-            <a href="#" aria-label="Make purchases now">Shop Now</a>
+            <a href="#">Shop Now</a>
           </div>
 
           <div class="swiper-container">
@@ -211,31 +211,36 @@
       <article class="blog">
         <h2 class="visually-hidden">Read all about jewelry</h2>
         <div class="container">
-          <div class="swiper__box">
+
+          <div class="blog__box">
             <p>Blog</p>
             <a href="#" aria-label="About jewelry">Read All</a>
           </div>
 
           <div class="blog__wrapper">
             <ul class="blog__list">
-              <li class="blog__item"></li>
-              <li class="blog__item">
-                <time datetime="2019-09-30">September 30, 2019</time>
-                <h3>How to care for your jewellery</h3>
-                <a href="#">Read Article</a>
+              <li class="blog__item blog__item--bg-jewellery">
+                <div class="blog__box-item">
+                  <time datetime="2019-09-30">September 30, 2019</time>
+                  <h3>How to care for <span></span> your jewellery</h3>
+                  <a href="#">Read Article</a>
+                </div>
               </li>
-              <li class="blog__item">
-                <time datetime="2019-09-23">September 23, 2019</time>
-                <h3>Power of crystals</h3>
-                <a href="#">Read Article</a>
+              <li class="blog__item blog__item--bg-crystals">
+                <div class="blog__box-item">
+                  <time datetime="2019-09-23">September 23, 2019</time>
+                  <h3>Power of <span></span> crystals</h3>
+                  <a href="#">Read Article</a>
+                </div>
               </li>
-              <li class="blog__item"></li>
             </ul>
-            <ul class="blog__list">
+            <ul class="blog__list blog__list--big">
               <li class="blog__item">
-                <time datetime="2019-09-16">September 16, 2019</time>
-                <h3>AW 19 trends</h3>
-                <a href="#">Read Article</a>
+                <div class="blog__box-item">
+                  <time datetime="2019-09-16">September 16, 2019</time>
+                  <h3>AW 19 trends</h3>
+                  <a href="#">Read Article</a>
+                </div>
               </li>
             </ul>
 
@@ -243,6 +248,44 @@
 
         </div>
       </article>
+
+      <section class="faq">
+        <div class="container">
+
+          <h2>Frequently asked questions</h2>
+          <ul class="faq__list">
+            <li class="faq__item faq__item--opened">
+              <svg role="img" class="faq__button" width="15" height="8">
+                <use xlink:href="#icon-arrowdown"></use>
+              </svg>
+              <h3>What materials are the jewellery made of?</h3>
+              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+            </li>
+            <li class="faq__item faq__item--closed">
+              <svg role="img" class="faq__button" width="15" height="8">
+                <use xlink:href="#icon-arrowdown"></use>
+              </svg>
+              <h3>Which countries do you deliver to?</h3>
+              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+            </li>
+            <li class="faq__item faq__item--closed">
+              <svg role="img" class="faq__button" width="15" height="8">
+                <use xlink:href="#icon-arrowdown"></use>
+              </svg>
+              <h3>What are the payment methods?</h3>
+              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+            </li>
+            <li class="faq__item faq__item--closed">
+              <svg role="img" class="faq__button" width="15" height="8">
+                <use xlink:href="#icon-arrowdown"></use>
+              </svg>
+              <h3>Can I return the jewellery if it didn’t fit me?</h3>
+              <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+            </li>
+          </ul>
+
+        </div>
+      </section>
 
     </main>
 
@@ -351,6 +394,7 @@
 
 
     <script src="swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 
   </body>

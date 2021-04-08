@@ -2,7 +2,6 @@
 //   outline: 1px solid red;
 // }
 
-
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -18,22 +17,7 @@ body {
   color: $gray;
 }
 
-.body-black {
-  position: relative;
-
-  &::after {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    content: "";
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-}
-
+.body-black,
 .body-white {
   position: relative;
 
@@ -46,6 +30,12 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.body-white {
+  &::after {
     background-color: rgba(255, 255, 255, 0);
   }
 }
