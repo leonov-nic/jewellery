@@ -131,14 +131,18 @@ input {
 //   max-width: 1220px;
 // }
 
-// .company .container,
-// .advantage .container {
-//   @media (max-width: $mobile-width-only) {
-//     width: 100%;
-//     max-width: 100%;
-//     padding: 0 14px;
-//   }
-// }
+.faq .container {
+
+  @media (max-width: $tablet-width-only) {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 45px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 0 15px;
+  }
+}
 
 .container {
   max-width: 1260px;
@@ -151,7 +155,6 @@ input {
 
   @media (max-width: $mobile-width-only) {
     width: 320px;
-    // max-width: 400px;
     padding: 0 15px;
   }
 }
