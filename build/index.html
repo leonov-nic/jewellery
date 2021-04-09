@@ -82,7 +82,7 @@
 
           <form>
             <label class="visually-hidden" for="search">Site search</label>
-            <input type="search" name="search" placeholder="Type here to search">
+            <input type="search" id="search" name="search" placeholder="Type here to search">
           </form>
 
           <div class="page-header__wrapper-logo">
@@ -236,11 +236,11 @@
               </button>
             </div>
             <div class="swiper-button-nex">
-              <button class="" type="button" aria-label="on right"></button>
+              <button class="" type="button" aria-label="on right">
                 <svg role="img" width="30" height="10">
                   <use xlink:href="#icon-close.svg"></use>
                 </svg>
-              
+              </button>
             </div>
           </div>
 
@@ -326,6 +326,80 @@
         </div>
       </section>
 
+      <section class="gallery">
+        <div class="container">
+
+          <h2><span>@</span>Chjewellery</h2>
+          <a href="#" aria-label="Photo gallery @Chjeweller">Follow Us</a>
+
+          <div class="gallery__wrapper">
+
+            <ul class="gallery__list gallery__list--first">
+              <li class="gallery__item">
+                <picture>
+                  <source type="img/webp" srcset="img/gallery-01-@1x.webp 1x, img/gallery-01-@2x.webp 2x">
+                  <!-- 1х: 230px; 2x: 460px -->
+                  <img src="img/gallery-01-@1x.jpg" srcset="img/gallery-01-@2x.jpg 2x" width="230" height="230" alt="sample">
+                </picture>
+              </li>
+              <li class="gallery__item">
+                <picture>
+                  <source type="img/webp" srcset="img/gallery-02-@1x.webp 1x, img/gallery-02-@2x.webp 2x">
+                  <!-- 1х: 230px; 2x: 460px -->
+                  <img src="img/gallery-02-@1x.jpg" srcset="img/gallery-02-@2x.jpg 2x" width="230" height="154" alt="sample">
+                </picture>
+              </li>
+            </ul>
+
+            <ul class="gallery__list gallery__list--second">
+              <li class="gallery__item">
+                <picture>
+                  <source type="img/webp" srcset="img/gallery-03-@1x.webp 1x, img/gallery-03-@2x.webp 2x">
+                    <!-- 1х: 400px; 2x: 800px -->
+                    <img src="img/gallery-03-@1x.jpg" srcset="img/gallery-03-@2x.jpg 2x" width="400" height="414" alt="sample">
+                </picture>
+              </li>
+            </ul>
+
+            <ul class="gallery__list gallery__list--third">
+              <li class="gallery__item">
+                <picture>
+                  <source type="img/webp" srcset="img/gallery-04-@1x.webp 1x, img/gallery-04-@2x.webp 2x">
+                  <!-- 1х: 232px; 2x: 464px -->
+                  <img src="img/gallery-04-@1x.jpg" srcset="img/gallery-04-@2x.jpg 2x" width="232" height="193" alt="sample">
+                </picture>
+              </li>
+              <li class="gallery__item">
+                <picture>
+                  <source type="img/webp" srcset="img/gallery-05-@1x.webp 1x, img/gallery-05-@2x.webp 2x">
+                  <!-- 1х: 218px; 2x: 436px -->
+                  <img src="img/gallery-05-@1x.jpg" srcset="img/gallery-05-@2x.jpg 2x" width="218" height="191" alt="sample">
+                </picture>
+              </li>
+            </ul>
+
+            <ul class="gallery__list gallery__list--fourth">
+              <li class="gallery__item">
+                <picture>
+                  <source type="img/webp" srcset="img/gallery-06-@1x.webp 1x, img/gallery-06-@2x.webp 2x">
+                  <!-- 1х: 218px; 2x: 436px -->
+                  <img src="img/gallery-06-@1x.jpg" srcset="img/gallery-06-@2x.jpg 2x" width="218" height="218" alt="sample">
+                </picture>
+              </li>
+              <li class="gallery__item">
+                <picture>
+                  <source type="img/webp" srcset="img/gallery-07-@1x.webp 1x, img/gallery-07-@2x.webp 2x">
+                  <!-- 1х: 232px; 2x: 464px -->
+                  <img src="img/gallery-07-@1x.jpg" srcset="img/gallery-07-@2x.jpg 2x" width="232" height="166" alt="sample">
+                </picture>
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
     </main>
 
     <footer class="page-footer">
@@ -337,7 +411,7 @@
             <p>News and updates from CH. No spam, we promise.</p>
             <form>
               <label class="visually-hidden" for="email">Your e-mail</label>
-              <input type="email" name="email" placeholder="Your E-mail">
+              <input type="email" id="email" name="email" placeholder="Your E-mail">
               <button class="button" type="submit" aria-label="Send form">Sign Up</button>
             </form>
           </div>

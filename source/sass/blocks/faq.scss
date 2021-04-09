@@ -3,14 +3,14 @@
 }
 
 .faq {
-  padding: 61px 0 100px;
+  padding: 61px 0 43px;
 
   @media (max-width: $tablet-width-only) {
-    padding: 10px 0 40px;
+    padding: 10px 0 20px;
   }
 
   @media (max-width: $mobile-width-only) {
-    padding: 10px 0 40px;
+    padding: 10px 0 18px;
   }
 }
 
@@ -130,6 +130,7 @@
 
   @media (max-width: $tablet-width-only) {
     padding-right: 12%;
+    padding-bottom: 44px;
   }
 
   @media (max-width: $mobile-width-only) {
