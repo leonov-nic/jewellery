@@ -1,0 +1,421 @@
+.catalog ul {
+  list-style: none;
+}
+
+.catalog {
+  position: relative;
+  padding: 80px 0 58px;
+
+  &::after {
+    display: block;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 132px;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: $gray-light;
+  }
+
+}
+
+.catalog__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.catalog__wrapper > button {
+display: none;
+}
+
+.catalog form {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+}
+
+.catalog fieldset {
+  position: relative;
+  border: none;
+  padding: 24px 25px 19px;
+  margin: 0;
+  margin-bottom: -1px;
+  border: 1px solid $brown;
+}
+
+.catalog fieldset.catalog__fieldset-prise {
+  padding-bottom: 10px;
+}
+
+.catalog svg {
+  position: absolute;
+  right: 25px;
+  top: 28px;
+}
+
+.catalog h3 {
+  margin: 0;
+
+  @include font(16px, 21px, 500);
+  color: $black;
+}
+
+.catalog label {
+  margin: 0;
+  padding-left: 25px;
+  transition: 0.5s;
+
+  @include font(14px, 18px, 500);
+  color: $black;
+
+  &:hover {
+    color: $gray;
+  }
+}
+
+.catalog__field-wrapper--prise label {
+  padding-left: 0;
+  margin-left: 38px;
+}
+
+.catalog__field-wrapper {
+  position: relative;
+  margin-left: 10px;
+  margin-bottom: 6px;
+}
+
+.catalog__field-wrapper--prise {
+  margin-left: 0;
+}
+
+.catalog__fields-box {
+  padding-top: 20px;
+}
+
+.catalog__checkbox-indicator {
+  cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 1px solid $brown;
+    background-color: $white;
+  }
+}
+
+.catalog__field-wrapper input[type="checkbox"]:checked + .catalog__checkbox-indicator {
+  &::after {
+    background-color: $brown;
+  }
+}
+
+.catalog__field-wrapper input[type="checkbox"]:focus + .catalog__checkbox-indicator {
+  &::after {
+    outline: none;
+    box-shadow: 0 0 4px 6px rgba($white, 0.3);
+    transition: 0.5s;
+  }
+}
+
+.catalog__field-wrapper input[type="checkbox"]:disabled + .catalog__checkbox-indicator {
+  &::before {
+    background-image: none;
+  }
+}
+
+.catalog input[type="number"] {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  width: 22px;
+
+  @include font(14px, 18px, 500);
+  color: $black;
+
+  -moz-appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &::placeholder {
+    color: $black;
+  }
+
+  &:hover,
+  &:focus {
+    -moz-appearance: number-input;
+  }
+}
+
+.catalog__line-box {
+  position: relative;
+  margin-bottom: 10px;
+  margin-top: 9px;
+}
+
+.catalog__line-prise {
+  position: relative;
+  widows: 200px;
+  height: 1px;
+  background-color: #f0eae4;
+
+  &::after {
+    position: absolute;
+    left: 50px;
+    top: 0;
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: $brown;
+  }
+}
+
+.catalog__line-box button {
+  position: absolute;
+  left: 45px;
+  top: -7px;
+  border: none;
+  background: none;
+  outline: none;
+  transition: 0.5s;
+  background-color: $brown;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: $gray;
+  }
+}
+
+button.catalog__line-button-second {
+  left: 150px;
+}
+
+label.catalog__label-second {
+  margin-left: 62px;
+}
+
+.catalog__button-wrapper {
+  padding-top: 35px;
+}
+
+.catalog__button-wrapper button {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 24px 0;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  background-color: $brown;
+  color: $white;
+  transition: 0.5s;
+
+  @include font(16px, 20px, 500);
+
+  &:hover {
+    color: $white;
+    background-color: $gray;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px 7px rgba($brown, 0.3);
+    transition: 0.5s;
+  }
+
+  &:last-child {
+    background-color: $white;
+    color: $black;
+    border: 1px solid $brown;
+    margin-bottom: 0;
+
+    &:hover {
+      color: $white;
+      background-color: $brown;
+    }
+  }
+}
+
+.catalog__js-opened .catalog__fields-box {
+  display: block;
+}
+
+.catalog__js-closed .catalog__fields-box {
+  display: none;
+}
+
+.catalog__js-opened svg {
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+
+.catalog__list {
+  width: 870px;
+  width: 74.3%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+
+  @media (max-width: 1150px) {
+    width: 72%;
+  }
+
+  @media (max-width: 1070px) {
+    width: 70%;
+  }
+}
+
+.catalog__item {
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.catalog__list a {
+  margin: 0;
+  display: block;
+
+  &:hover {
+    img {
+      opacity: 0.5;
+    }
+
+    h3,
+    p {
+      color: $brown;
+    }
+  }
+}
+
+.catalog__list img {
+  display: block;
+  transition: 0.5s;
+
+  @media (max-width: 1230px) {
+    width: 250px;
+    height: auto;
+  }
+
+  @media (max-width: 1150px) {
+    width: 220px;
+  }
+
+  @media (max-width: 1070px) {
+    width: 200px;
+  }
+}
+
+.catalog__list h3 {
+  @include font(16px, 21px, 500);
+
+  color: $black;
+  margin: 0;
+  padding: 0;
+  padding-top: 22px;
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 16px;
+  }
+}
+.catalog__list p {
+  margin: 0;
+  padding-top: 6px;
+  color: $black;
+
+  @include font(14px, 18px, 700);
+}
+
+
+.catalog__wrapper-pagination {
+  width: 74.3%
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  padding-top: 15px;
+
+  @media (max-width: 1150px) {
+    width: 72%;
+  }
+
+  @media (max-width: 1070px) {
+    width: 70%;
+  }
+}
+
+.catalog__wrapper-pagination button {
+  padding: 5px 0;
+  color: black;
+
+  @include font(16px, 21px, 500);
+
+  &:hover {
+    color: $gray;
+  }
+}
+
+.catalog__wrapper-pagination p {
+  letter-spacing: 0.27em;
+  padding-right: 26px;
+}
+
+.catalog__wrapper-pagination span {
+  color: $black;
+  margin: 0;
+  padding: 0;
+}
+
+// .popup__field-box {
+//   position: relative;
+//   display: flex;
+//   justify-content: flex-start;
+//   flex-wrap: wrap;
+
+//   width: 90%;
+//   padding-top: 35px;
+// }
+
+// .popup label {
+//   padding-left: 40px;
+//   color: rgba($white, 0.8);
+// }
+
+// @keyframes modal-in {
+//   0% {
+//     transform: translateY(-2000px);
+//   }
+
+//   70% {
+//     transform: translateY(20px);
+//   }
+
+//   90% {
+//     transform: translateY(-10px);
+//   }
+
+//   100% {
+//     transform: translateY(0);
+//   }
+// }
+
+// .popup-show {
+//   display: block;
+//   animation-name: modal-in;
+//   animation-duration: 0.6s;
+// }

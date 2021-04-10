@@ -12,7 +12,7 @@
   var popup = document.querySelector(".popup-log");
   var popupClose = popup.querySelector(".popup__close");
   var popupMail = popup.querySelector("[name=mail]");
-  var popupOpen = document.querySelectorAll("#log");
+  var popupOpen = document.querySelectorAll(".page-header__log");
   var form = popup.querySelector("form");
   var storageMail = "";
   var isStorageSupport = "true";
@@ -128,7 +128,7 @@
   $(document).ready(function() {
 
     var openItems = function () {
-      $(".faq__item p").slideUp(200).removeClass('faq__item--opened');
+      $(".faq__item").children('p').slideUp(200).removeClass('faq__item--opened');
       $(".faq__item").removeClass('faq__item--opened');
       $(".faq__item").addClass('faq__item--closed');
 
@@ -137,8 +137,20 @@
       $(this).addClass('faq__item--opened');
     }
 
+    var openFiltertField = function () {
+      $("fieldset").children('.catalog__fields-box').slideUp(200).removeClass('catalog__js-opened');
+      $("fieldset").removeClass('catalog__js-opened');
+      $("fieldset").addClass('catalog__js-closed');
+
+      $(this).next('.catalog__fields-box').slideDown(200).removeClass('catalog__js-closed');
+      $(this).parents('fieldset').removeClass('catalog__js-closed');
+      $(this).parents('fieldset').addClass('catalog__js-opened');
+    }
+
     $(".faq__item").off("click");
     $(".faq__item").on("click", openItems);
+    $("fieldset h3").on("click", openFiltertField);
+
   });
 
 

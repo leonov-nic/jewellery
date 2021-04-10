@@ -82,6 +82,15 @@ input {
   }
 }
 
+button {
+  margin: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+}
+
 // .field-invalid {
 //   box-shadow: 0 0 2px 2px red;
 // }
