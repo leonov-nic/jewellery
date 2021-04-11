@@ -46,6 +46,14 @@
   padding-top: 37px;
 }
 
+.page-header__first-box--catalog > form {
+  padding-top: 10px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 0;
+  }
+}
+
 form {
   @media (max-width: $tablet-width-only) {
     position: relative;
@@ -59,8 +67,12 @@ form {
   }
 }
 
-.page-header__first-box--catalog form {
-  padding-top: 9px;
+.page-header__first-box--catalog .page-header__toggle {
+  margin-top: 18px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 11px;
+  }
 }
 
 .page-header input {
@@ -108,6 +120,11 @@ form {
 
 .page-header__first-box--catalog .page-header__list-log {
   padding-top: 7px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 0;
+    margin: 0;
+  }
 }
 
 .page-header__item-log {
@@ -169,10 +186,6 @@ form {
     padding-right: 0;
     margin: 0;
   }
-}
-
-.page-header__nav--catalog {
-  margin-top: 10px;
 }
 
 .page-header__list-nav {
@@ -309,6 +322,11 @@ form {
 
 .page-header__first-box--catalog .page-header__wrapper-logo {
   padding-top: 0;
+  padding-bottom: 28px;
+
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 19px
+  }
 }
 
 .page-header__icon-logo {
@@ -385,6 +403,23 @@ form {
     background-image: url("../img/catalogbg-desktop@2x.jpg");
   }
 
+  @media (max-width: $tablet-width-only) {
+    background-image: url("../img/catalogbg-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/catalogbg-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: url("../img/catalogbg-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/catalogbg-mobile@2x.jpg");
+    }
+  }
 }
 
 .page-header__second-box p {
@@ -414,6 +449,12 @@ form {
 
       padding-top: 7px;
     }
+  }
+}
+
+.page-header__second-box--catalog p:first-child {
+  @media (max-width: $mobile-width-only) {
+    padding-top: 0;
   }
 }
 
@@ -543,25 +584,6 @@ form {
 
     100% {
       opacity: 1;
-    }
-  }
-
-
-  @keyframes menuclose {
-    0% {
-      transform: translateX(0);
-    }
-
-    0% {
-      opacity: 1;
-    }
-
-    100% {
-      transform: translateX(-900px);
-    }
-
-    100% {
-      opacity: 0;
     }
   }
 

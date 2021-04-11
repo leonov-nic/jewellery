@@ -14,6 +14,28 @@
   var popupMail = popup.querySelector("[name=mail]");
   var popupOpen = document.querySelectorAll(".page-header__log");
   var form = popup.querySelector("form");
+
+  var catalog = document.querySelector(".catalog");
+  var filterOpen = document.querySelector("#filter-open");
+  var filterClose = document.querySelector(".catalog__close-filter");
+
+
+
+  if (catalog && filterOpen && filterClose) {
+    function closeFilter() {
+      catalog.classList.remove('active-filter');
+      filterClose.removeEventListener("click", closeFilter);
+    }
+
+    function openFilter() {
+      catalog.classList.add('active-filter');
+      filterClose.addEventListener("click", closeFilter);
+    }
+
+    filterOpen.addEventListener("click", openFilter);
+  }
+
+
   var storageMail = "";
   var isStorageSupport = "true";
 
@@ -38,7 +60,7 @@
     openCloseMenu(pageHeader, navigation);
   }
 
-  headerToggle.addEventListener('click', onOpenMenu);
+  headerToggle.addEventListener("click", onOpenMenu);
 
   var setStorage = function () {
     try {
