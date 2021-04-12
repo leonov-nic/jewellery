@@ -10,6 +10,21 @@
   }
 }
 
+.swiper--card {
+  padding-top: 60px;
+  padding-bottom: 114px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 40px;
+    padding-bottom: 63px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 40px;
+    padding-bottom: 53px;
+  }
+}
+
 .swiper__box {
   display: flex;
   justify-content: center;
@@ -67,6 +82,19 @@
   }
 }
 
+.swiper .swiper__box--card a {
+  padding-top: 20px;
+  padding-bottom: 5px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 20px;
+
+    &::after {
+      bottom: 0;
+    }
+  }
+}
+
 .swiper-slide {
   width: 270px;
   text-align: center;
@@ -102,11 +130,12 @@
 
   @media (max-width: $tablet-width-only) {
     width: 324px;
-    height: auto;
+    min-height: 340px;
   }
 
   @media (max-width: $mobile-width-only) {
     width: 130px;
+    min-height: 136px;
   }
 }
 
@@ -170,7 +199,7 @@
     background-image: url("../img/icon-right-tablet.svg");
   }
 
-  @media (max-width: $tablet-width-only) {
+  @media (max-width: $mobile-width-only) {
     display: none;
   }
 }
@@ -192,6 +221,18 @@
   outline: none;
   padding: 10px;
   cursor: pointer;
+}
+
+.swiper--card .swiper-container {
+  @media (max-width: $tablet-width-only) {
+    padding-top: 97px;
+    margin-top: -48px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 87px;
+    margin-top: -48px;
+  }
 }
 
 .swiper-wrapper {
