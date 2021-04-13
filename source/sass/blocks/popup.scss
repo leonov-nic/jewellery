@@ -41,6 +41,7 @@
 
 .popup-log h2 {
   font-family: "Cormorant Garamond", "Times New Roman", serif;
+
   @include font(34px, 44px, 700);
 
   margin: 0 auto;
@@ -154,7 +155,6 @@
 
 .popup-log .button {
   margin: 0;
-  padding: 0;
   border: none;
   cursor: pointer;
   outline: none;

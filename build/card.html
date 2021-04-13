@@ -103,11 +103,11 @@
             <li class="page-header__item-log page-header__item-log--hover">
               <a href="#" aria-label="Open cart">
                 <p class="page-header__cart">Cart<span>0</span></p>
-                <button class="page-header__toggle page-header__toggle--input" type="button" aria-label="Open cart">
-                  <svg role="img" class="page-header__icon-input" width="20" height="18">
+                <div class="page-header__toggle page-header__toggle--input">
+                  <svg role="img" class="page-header__icon-input" width="20" height="18" aria-label="Open cart">
                     <use xlink:href="#icon-input"></use>
                   </svg>
-                </button>
+                </div>
               </a>
             </li>
           </ul>
@@ -191,7 +191,7 @@
                 <p>18” / 20”</p>
               </div>
 
-              <button type="button">Add to cart</button>
+              <button class="button button--js-card" type="button">Add to cart</button>
 
               <div class="card__wrapper-info">
                 <p>14 Day Returns</p>
@@ -217,62 +217,74 @@
             <div class="swiper-wrapper">
 
               <div class="swiper-slide">
-                <img src="img/purple-gemstone-necklace@1x.png" width="270" height="284" alt="product">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/purple-gemstone-necklace@1x.png" srcset="img/purple-gemstone-necklace@2x.png 2x" width="270" height="284" alt="product">
                 <h3>Necklace with amethyst</h3>
                 <p>$ 145</p>
               </div>
               <div class="swiper-slide">
-                <img src="img/layered-choker-necklace@1x.png" width="270" height="284" alt="product">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/layered-choker-necklace@1x.png" srcset="img/layered-choker-necklace@2x.png 2x" width="270" height="284" alt="product">
                 <h3>Layered сhoker</h3>
                 <p>$ 115</p>
               </div>
               <div class="swiper-slide">
-                <img src="img/dainty-gold-necklace@1x.png" width="270" height="284" alt="product">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/dainty-gold-necklace@1x.png" srcset="img/dainty-gold-necklace@2x.png 2x" width="270" height="284" alt="product">
                 <h3>Gold chain</h3>
                 <p>$ 215</p>
               </div>
               <div class="swiper-slide">
-                <img src="img/galaxy-earrings@1x.png" width="270" height="284" alt="product">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/galaxy-earrings@1x.png" srcset="img/galaxy-earrings@2x.png 2x" width="270" height="284" alt="product">
                 <h3>Galaxy earrings</h3>
                 <p>$ 95</p>
               </div>
               <div class="swiper-slide">
-                <img src="img/bird-necklace@1x.png" width="270" height="284" alt="product">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/bird-necklace@1x.png" srcset="img/bird-necklace@2x.png 2x" width="270" height="284" alt="product">
                 <h3>Gold bird necklace</h3>
                 <p>$ 135</p>
               </div>
               <div class="swiper-slide">
-                <img src="img/dainty-gold-necklace@1x.png" width="270" height="284" alt="product">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/dainty-gold-necklace@1x.png" srcset="img/dainty-gold-necklace@2x.png 2x" width="270" height="284" alt="product">
                 <h3>Layered сhoker</h3>
                 <p>$ 115</p>
               </div>
               <div class="swiper-slide">
-                <img src="img/black-leather-choker-necklace@1x.png" width="270" height="284" alt="product">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/black-leather-choker-necklace@1x.png" srcset="img/black-leather-choker-necklace@2x.png 2x" width="270" height="284" alt="product">
                 <h3>Black leather choker</h3>
                 <p>$ 85</p>
               </div>
               <div class="swiper-slide">
-                <img src="img/galaxy-earrings@1x.png" width="270" height="284" alt="product">
-                <h3>Black leather choker</h3>
-                <p>$ 85</p>
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/purple-gemstone-necklace@1x.png" srcset="img/purple-gemstone-necklace@2x.png 2x" width="270" height="284" alt="product">
+                <h3>Necklace with amethyst</h3>
+                <p>$ 155</p>
               </div>
               <div class="swiper-slide">
-                <img src="img/blue-gemstone-pendant@1x.png" width="270" height="284" alt="product">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/blue-gemstone-pendant@1x.png" srcset="img/blue-gemstone-pendant@2x.png 2x" width="270" height="284" alt="product">
                 <h3>Blue gemstone pendant</h3>
                 <p>$ 105</p>
               </div>
               <div class="swiper-slide">
-                <img src="img/elephant-earrings@1x.png" width="270" height="284" alt="product">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/elephant-earrings@1x.png" srcset="img/elephant-earrings@2x.png 2x" width="270" height="284" alt="product">
                 <h3>Elephant earrings</h3>
                 <p>$ 95</p>
               </div>
               <div class="swiper-slide">
-                <img src="img/threader-necklace-closeup@1x.png" width="270" height="284" alt="product">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/threader-necklace-closeup@1x.png" srcset="img/threader-necklace-closeup@2x.png 2x" width="270" height="284" alt="product">
                 <h3>Threader necklace</h3>
                 <p>$ 115</p>
               </div>
               <div class="swiper-slide">
-                <img src="img/origami-crane-necklace@1x.png" width="270" height="284" alt="product">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/origami-crane-necklace@1x.png" srcset="img/origami-crane-necklace@2x.png 2x" width="270" height="284" alt="product">
                 <h3>Origami crane necklace</h3>
                 <p>$ 105</p>
               </div>
@@ -310,7 +322,7 @@
             <form>
               <label class="visually-hidden" for="email">Your e-mail</label>
               <input type="email" id="email" name="email" placeholder="Your E-mail">
-              <button class="button" type="submit" aria-label="Send form">Sign Up</button>
+              <button type="submit" aria-label="Send form">Sign Up</button>
             </form>
           </div>
 
@@ -403,6 +415,48 @@
       <button class="popup__close" type="button" aria-label="Close form"></button>
     </div>
 
+    <div class="popup-addtocart">
+      <p>The item was added to your cart</p>
+
+      <ul class="popup-addtocart__list">
+        <li class="popup-addtocart__item">
+          <img src="img/necklace-detail@1x.png" alt="necklace-detail" width="84" height="79">
+        </li>
+
+        <li class="popup-addtocart__item popup-addtocart__item--price">
+          <h2>Gold Necklace</h2>
+          <p>$ 115</p>
+        </li>
+        <li class="popup-addtocart__item popup-addtocart__item--quantity">
+          <button type="button" aria-label="plus">
+            <svg role="img" width="14" height="14">
+              <use xlink:href="#icon-plus"></use>
+            </svg>
+          </button>
+          <p>1</p>
+          <button type="button" aria-label="minus">
+            <svg role="img" width="14" height="2">
+              <use xlink:href="#icon-minus"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+
+      <div class="popup-addtocart__description">
+        <p>You have 1 item in the cart</p>
+        <p>Cart subtotal: $ 115</p>
+      </div>
+
+      <div class="popup-addtocart__wrapper-button">
+        <a href="catalog.html">Continue shopping</a>
+        <button class="button" type="button">Checkout</button>
+      </div>
+      <button class="popup-addtocart__close" type="button" aria-label="Close">
+        <svg role="img" width="14" height="14">
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </button>
+    </div>
 
     <script src="swiper/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

@@ -151,6 +151,7 @@
     padding-top: 16px;
   }
 }
+
 .swiper-slide p {
   margin: 0;
   padding-top: 6px;
@@ -164,7 +165,8 @@
   height: 14px;
   text-align: center;
   line-height: 20px;
-  color: #9B9997;
+  color: #9b9997;
+
   @include font(16px, 21px, 500);
 
   opacity: 1;
@@ -177,7 +179,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  color:$black;
+  color: $black;
 }
 
 .swiper-button-nex,

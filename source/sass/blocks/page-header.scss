@@ -153,11 +153,8 @@ form {
   position: relative;
   transition: all 0.5s;
   margin-left: 5px;
-  @include font(14px, 21px, 500);
-}
 
-.page-header__item-log p {
-  margin: 0;
+  @include font(14px, 21px, 500);
 }
 
 .page-header__item-log--none {
@@ -255,7 +252,7 @@ form {
 .page-header__item-tablet {
   margin-bottom: 18px;
 
-  &:last-child  {
+  &:last-child {
     padding-top: 25px;
 
     @media (max-width: $tablet-width-only) {
@@ -350,7 +347,7 @@ form {
   padding-bottom: 28px;
 
   @media (max-width: $mobile-width-only) {
-    padding-bottom: 19px
+    padding-bottom: 19px;
   }
 }
 
@@ -458,6 +455,7 @@ form {
   font-family: "Cormorant Garamond", "Times New Roman", serif;
   font-style: italic;
   font-weight: normal;
+
   @include font(38px, 48px, 00);
 
   text-align: center;
@@ -481,26 +479,17 @@ form {
   }
 }
 
-.page-header__second-box--catalog p:first-child {
-  @media (max-width: $mobile-width-only) {
-    padding-top: 0;
-  }
-}
-
 .page-header__second-box--catalog p {
   @include font(22px, 29px, 500);
 
   &:first-child {
     @include font(34px, 45px, 700);
+
+    @media (max-width: $mobile-width-only) {
+      padding-top: 0;
+    }
   }
 }
-
-
-
-
-
-
-
 
 .page-header__toggle {
   display: none;
@@ -508,7 +497,7 @@ form {
   background: none;
   border: none;
   margin: 0;
-  outline: none
+  outline: none;
 }
 
 @media (max-width: $tablet-width-only) {

@@ -31,7 +31,6 @@ footer {
   align-content: flex-start;
   padding-top: 10px;
   margin-right: 20px;
-  width: 500px;
   width: 42.9%;
 
   @media (max-width: 1235px) {
@@ -215,7 +214,8 @@ footer {
   @include font(16px, 21px, 500);
 
   &:hover {
-    color:  $brown;
+    color: $brown;
+
     &::before {
       display: block;
       margin: 0;
@@ -231,7 +231,6 @@ footer {
 
 .page-footer__list-social {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
@@ -295,7 +294,7 @@ footer {
   width: 100%;
 
   &:hover {
-    color:  $gray;
+    color: $gray;
 
     svg {
       fill: $brown;

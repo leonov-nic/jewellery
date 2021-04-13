@@ -37,6 +37,7 @@
 .gallery span {
   margin: 0;
   padding: 0;
+
   @include font(42px, 54px, 700);
 }
 
@@ -168,7 +169,6 @@
 
 .gallery__list--fourth {
   width: 19.8%;
-  margin-left: 16px;
   margin-left: 1.5%;
   justify-content: flex-end;
 

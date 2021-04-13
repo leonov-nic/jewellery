@@ -153,6 +153,10 @@
 .card__photo-item:first-child img {
   transition: 0.5s;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
   @media (max-width: 1080px) {
     width: 95px;
     height: 115px;
@@ -254,7 +258,7 @@
   padding: 11px 0;
   font-weight: 500;
 
-  &:after {
+  &::after {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -269,12 +273,10 @@
   }
 }
 
-.card__wrapper button {
+.button {
   width: 100%;
   padding: 26px 0;
-  color: $white;
   font-weight: 500;
-  background-color: $brown;
 }
 
 .card__wrapper-info p {
@@ -283,7 +285,7 @@
   font-weight: 500;
   padding-top: 16px;
 
-  &:after {
+  &::after {
     position: absolute;
     right: -13px;
     top: 15px;
@@ -297,7 +299,7 @@
     }
   }
 
-  &:last-child:after {
+  &:last-child::after {
     display: none;
   }
 
