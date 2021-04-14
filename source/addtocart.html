@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <meta charset="UTF-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Jewelry Chjewellery">
+    <meta name="Description" content="Product: Jewelry. Jewelry store Chjewellery. ">
+
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+
+    <title>Login</title>
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <script>
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async=""></script>
+  </head>
+
+  <body>
+    <h1 class="visually-hidden">Adding product to the cart</h1>
+
+    <div style="display:none">
+      <include src="build/img/sprite_auto.svg"></include>
+    </div>
+
+    <header class="page-header page-header--closed page-header--nojs">
+      <div class="page-header__wrapper">
+        <div class="page-header__first-box">
+          <button class="page-header__toggle page-header__toggle--menu" type="button" aria-label="Открыть меню">
+            <svg role="img" class="page-header__icon-menu" width="25" height="18">
+              <use xlink:href="#icon-menu"></use>
+            </svg>
+          </button>
+
+          <form action="echo/htmlacademy.ru" method="POST" enctype="multipart/form-data">
+            <label class="visually-hidden" for="search">Site search</label>
+            <input type="search" id="search" name="search" placeholder="Type here to search">
+          </form>
+
+          <div class="page-header__wrapper-logo">
+            <a href="index.html" class="page-header__logo" aria-label="Logotype Chjewellery">
+              <svg role="img" class="page-header__icon-logo" width="66" height="66">
+                <use xlink:href="#icon-logo"></use>
+              </svg>
+            </a>
+          </div>
+
+          <ul class="page-header__list-log">
+            <li class="page-header__item-log page-header__item-log--none">
+              <a href="#" class="page-header__log">Login</a>
+            </li>
+            <li class="page-header__item-log page-header__item-log--hover">
+              <a href="#" aria-label="Open cart">
+                <p class="page-header__cart">Cart<span>0</span></p>
+                <div class="page-header__toggle page-header__toggle--input">
+                  <svg role="img" class="page-header__icon-input" width="20" height="18" aria-label="Open cart">
+                    <use xlink:href="#icon-input"></use>
+                  </svg>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="page-header__nav">
+          <ul class="page-header__list-nav">
+            <li class="page-header__item-nav">
+              <a href="#">What’s new</a>
+            </li>
+            <li class="page-header__item-nav">
+              <a href="#">Chokers</a>
+            </li>
+            <li class="page-header__item-nav">
+              <a href="#">Necklaces</a>
+            </li>
+            <li class="page-header__item-nav">
+              <a href="#">Rings</a>
+            </li>
+            <li class="page-header__item-nav">
+              <a href="#">Earrings</a>
+            </li>
+          </ul>
+          <ul class="page-header__list-tablet">
+            <li class="page-header__item-tablet">
+              <a href="#">About CH</a>
+            </li>
+            <li class="page-header__item-tablet">
+              <a href="#">Stores & Hours</a>
+            </li>
+            <li class="page-header__item-tablet">
+              <a href="#">Contact Us</a>
+            </li>
+            <li class="page-header__item-tablet">
+              <a href="login.html" class="page-header__log">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="nojs">
+      <div class="popup-addtocart">
+        <p>The item was added to your cart</p>
+
+        <ul class="popup-addtocart__list">
+          <li class="popup-addtocart__item">
+            <img src="img/necklace-detail@1x.png" alt="necklace-detail" width="84" height="79">
+          </li>
+
+          <li class="popup-addtocart__item popup-addtocart__item--price">
+            <h2>Gold Necklace</h2>
+            <p>$ 115</p>
+          </li>
+          <li class="popup-addtocart__item popup-addtocart__item--quantity">
+            <button type="button" aria-label="plus">
+              <svg role="img" width="14" height="14">
+                <use xlink:href="#icon-plus"></use>
+              </svg>
+            </button>
+            <p>1</p>
+            <button type="button" aria-label="minus">
+              <svg role="img" width="14" height="2">
+                <use xlink:href="#icon-minus"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+
+        <div class="popup-addtocart__description">
+          <p>You have 1 item in the cart</p>
+          <p>Cart subtotal: $ 115</p>
+        </div>
+
+        <div class="popup-addtocart__wrapper-button">
+          <a href="catalog.html">Continue shopping</a>
+          <button class="button" type="button">Checkout</button>
+        </div>
+        <button class="popup-addtocart__close" type="button" aria-label="Close">
+          <svg role="img" width="14" height="14">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </main>
+
+    <script src="js/main.js"></script>
+
+  </body>
+</html>

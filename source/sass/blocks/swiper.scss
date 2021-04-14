@@ -190,10 +190,15 @@
   z-index: 100;
   width: 30px;
   height: 10px;
+  transition: 0.5s;
   background-image: url("../img/icon-right-desktop.svg");
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
 
   @media (max-width: $tablet-width-only) {
     width: 37px;

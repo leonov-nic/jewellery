@@ -66,9 +66,8 @@
     box-shadow: 0 8px 0 0 rgba($brown, 0.5);
   }
 
-  &:hover {
-    border-color: $brown;
-    box-shadow: 0 2px 0 0 $brown;
+  &:focus:invalid {
+    box-shadow: 0 8px 0 0 red;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -180,8 +179,8 @@
   position: absolute;
   right: 20px;
   top: 20px;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border: none;
   background: none;
   background-image: url("../img/icon-close.svg");

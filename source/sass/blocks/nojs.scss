@@ -1,0 +1,19 @@
+.nojs {
+  .popup-log {
+    display: flex;
+    top: 200px;
+  }
+
+  .popup__close {
+    display: none;
+  }
+
+  .popup-addtocart {
+    top: 200px;
+    display: block;
+  }
+
+  .popup-addtocart__close {
+    display: none;
+  }
+}

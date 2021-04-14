@@ -38,7 +38,7 @@
 
   @media (max-width: $mobile-width-only) {
     @include font(16px, 23px, 500);
-    // padding-right: 26%;
+
     padding-left: 7px;
   }
 }

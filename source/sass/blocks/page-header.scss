@@ -353,6 +353,7 @@ form {
 
 .page-header__icon-logo {
   transition: 0.5s;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.2);
@@ -515,21 +516,6 @@ form {
     margin-left: 5px;
   }
 
-  .page-header--nojs {
-    .page-header__toggle {
-      display: none;
-    }
-
-    form {
-      display: flex;
-    }
-
-    .page-header__nav {
-      position: relative;
-      display: block;
-    }
-  }
-
   .page-header--closed {
     .page-header__icon-menu {
       display: block;
@@ -566,6 +552,41 @@ form {
       z-index: 49;
       background-color: $brown;
       display: block;
+    }
+  }
+
+  .page-header--nojs {
+    .page-header__toggle {
+      display: none;
+    }
+
+    .page-header__icon-menu {
+      display: none;
+    }
+
+    form {
+      display: flex;
+      background-color: $brown;
+      width: 100%;
+    }
+
+    .page-header__icon-logo {
+      fill: $white;
+    }
+
+    .page-header__wrapper-logo {
+      margin: 0 auto;
+    }
+
+    .page-header__nav {
+      position: relative;
+      display: block;
+      opacity: 1;
+      margin-top: 0;
+    }
+
+    .page-header__wrapper {
+      background-color: $brown;
     }
   }
 
