@@ -7,6 +7,12 @@ html {
   scroll-behavior: smooth;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   @include font;
 
@@ -38,12 +44,6 @@ body {
   &::after {
     background-color: rgba(255, 255, 255, 0);
   }
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
 }
 
 a {

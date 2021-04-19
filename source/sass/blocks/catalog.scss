@@ -4,7 +4,7 @@
 
 .catalog {
   position: relative;
-  padding: 50px 0 58px;
+  padding: 50px 0 69px;
 
   &::after {
     display: block;
@@ -21,7 +21,7 @@
 
   @media (max-width: $mobile-width-only) {
     padding-top: 40px;
-    padding-bottom: 63px;
+    padding-bottom: 61px;
   }
 }
 
@@ -62,7 +62,7 @@
     width: 442px;
     padding-bottom: 12px;
     box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
-    transform: translateX(-550px);
+    transform: translateX(-600px);
     display: block;
     position: absolute;
     top: 49px;
@@ -498,6 +498,10 @@ label.catalog__label-second {
   margin-bottom: 36px;
   text-align: center;
 
+  @media (max-width: $tablet-width-only) {
+    margin-bottom: 35px;
+  }
+
   @media (max-width: $mobile-width-only) {
     margin-bottom: 26px;
     width: 130px;
@@ -572,7 +576,7 @@ label.catalog__label-second {
   display: flex;
   justify-content: space-between;
   margin-left: auto;
-  padding-top: 15px;
+  padding-top: 29px;
 
   @media (max-width: 1150px) {
     width: 72%;
@@ -584,11 +588,37 @@ label.catalog__label-second {
 
   @media (max-width: $tablet-width-only) {
     width: 678px;
-    padding-top: 17px;
+    padding-top: 32px;
   }
 
   @media (max-width: $mobile-width-only) {
     text-align: center;
+    padding-top: 14px;
+  }
+}
+
+.catalog__wrapper-pagination-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 104px;
+  margin-right: 28px;
+
+  @media (max-width: $mobile-width-only) {
+    margin: 0 auto;
+    width: 144px;
+  }
+}
+
+.catalog__wrapper-pagination-list a {
+  margin: 0;
+  color: $gray;
+  transition: 0.5s;
+  letter-spacing: 0.27em;
+  padding: 2px;
+
+  &:hover {
+    color: $brown;
   }
 }
 
@@ -609,22 +639,6 @@ label.catalog__label-second {
 
   @media (max-width: $mobile-width-only) {
     display: none;
-  }
-}
-
-.catalog__wrapper-pagination p {
-  letter-spacing: 0.27em;
-  padding-right: 26px;
-
-  @media (max-width: $tablet-width-only) {
-    padding-right: 28px;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    padding-right: 0;
-    padding-left: 5px;
-    margin: 0 auto;
-    letter-spacing: 0.59em;
   }
 }
 

@@ -155,9 +155,12 @@
 
         <ul class="popup-addtocart__list">
           <li class="popup-addtocart__item">
-            <img src="img/necklace-detail@1x.png" alt="necklace-detail" width="84" height="79">
+            <picture>
+              <source type="img/webp" srcset="img/necklace-detail@1x.webp 1x, img/necklace-detail@2x.webp 2x">
+              <!-- 1х: 84px; 2x: 168px -->
+              <img src="img/necklace-detail@1x.png" srcset="img/necklace-detail@2x.png 2x" width="84" height="79" alt="necklace-detail">
+            </picture>
           </li>
-
           <li class="popup-addtocart__item popup-addtocart__item--price">
             <h2>Gold Necklace</h2>
             <p>$ 115</p>

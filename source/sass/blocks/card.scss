@@ -110,6 +110,8 @@
 }
 
 .card__photo-item:last-child img {
+  vertical-align: bottom;
+
   @media (max-width: 1130px) {
     width: 430px;
     height: auto;
@@ -152,6 +154,7 @@
 
 .card__photo-item:first-child img {
   transition: 0.5s;
+  vertical-align: bottom;
 
   &:hover {
     opacity: 0.6;
