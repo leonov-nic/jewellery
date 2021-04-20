@@ -267,20 +267,24 @@
   @media (max-width: $mobile-width-only) {
     margin-right: 20px;
     margin-top: 5px;
+  }
+}
 
-    &.page-footer__icon-face {
-      width: 22px;
-      height: 31px;
-      padding: 5px;
-    }
+.page-footer__list-social .page-footer__icon-face {
+  @media (max-width: $mobile-width-only) {
+    width: 22px;
+    height: 31px;
+    padding: 5px;
+  }
+}
 
-    &.page-footer__icon-insta,
-    &.page-footer__icon-pint,
-    &.page-footer__icon-twit {
-      width: 30px;
-      height: 31px;
-      padding: 5px;
-    }
+.page-footer__list-social .page-footer__icon-insta,
+.page-footer__list-social .page-footer__icon-pint,
+.page-footer__list-social .page-footer__icon-twit {
+  @media (max-width: $mobile-width-only) {
+    width: 30px;
+    height: 31px;
+    padding: 5px;
   }
 }
 

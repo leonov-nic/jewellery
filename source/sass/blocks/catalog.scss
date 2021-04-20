@@ -78,7 +78,7 @@
   }
 }
 
-.active-filter form {
+.catalog--active-filter form {
   transform: translateX(-60px);
 
   @media (max-width: $mobile-width-only) {
@@ -108,7 +108,7 @@
   }
 }
 
-.catalog fieldset.catalog__fieldset-prise {
+.catalog .catalog__fieldset-prise {
   padding-bottom: 10px;
 
   @media (max-width: $tablet-width-only) {
@@ -371,7 +371,7 @@
   }
 }
 
-button.catalog__line-button-second {
+.catalog__line-box .catalog__line-button-second {
   left: 150px;
 
   @media (max-width: $tablet-width-only) {
@@ -383,7 +383,7 @@ button.catalog__line-button-second {
   }
 }
 
-label.catalog__label-second {
+.catalog__field-wrapper--prise .catalog__label-second {
   margin-left: 62px;
 
   @media (max-width: $tablet-width-only) {
