@@ -1,12 +1,12 @@
 .swiper {
-  padding: 120px 0 53px;
+  padding: 15px 0 53px;
 
   @media (max-width: $tablet-width-only) {
-    padding: 70px 0 20px;
+    padding: 16px 0 20px;
   }
 
   @media (max-width: $mobile-width-only) {
-    padding: 60px 0 20px;
+    padding: 0px 0 20px;
   }
 }
 
@@ -30,6 +30,15 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
+  padding-bottom: 60px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-bottom: 55px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 44px;
+  }
 }
 
 .swiper__box p {
@@ -185,7 +194,7 @@
 .swiper-button-nex,
 .swiper-button-pre {
   position: absolute;
-  top: 0;
+  top: 149px;
   right: 0;
   z-index: 100;
   width: 30px;
@@ -201,6 +210,7 @@
   }
 
   @media (max-width: $tablet-width-only) {
+    top: 95px;
     width: 37px;
     height: 16px;
     background-image: url("../img/icon-right-tablet.svg");
@@ -222,6 +232,11 @@
   }
 }
 
+.swiper--card .swiper-button-nex,
+.swiper--card .swiper-button-pre {
+  top: 43px;
+}
+
 .swiper-container button {
   background: none;
   border: none;
@@ -231,15 +246,7 @@
 }
 
 .swiper--card .swiper-container {
-  @media (max-width: $tablet-width-only) {
-    padding-top: 97px;
-    margin-top: -48px;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    padding-top: 87px;
-    margin-top: -48px;
-  }
+  padding-top: 0;
 }
 
 .swiper-wrapper {
@@ -251,7 +258,7 @@
   }
 
   @media (max-width: $tablet-width-only) {
-    min-height: 482px;
+    min-height: 481px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -262,14 +269,12 @@
 .swiper-container {
   width: 100%;
   padding-top: 105px;
-  margin-top: -46px;
 
   @media (max-width: $tablet-width-only) {
-    padding-top: 97px;
-    margin-top: -43px;
+    padding-top: 55px;
   }
 
   @media (max-width: $mobile-width-only) {
-    padding-top: 87px;
+    padding-top: 60px;
   }
 }

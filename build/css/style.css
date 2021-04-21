@@ -377,11 +377,9 @@ body {
   font-family: "Poppins", "Arial", sans-serif;
   color: #9b9997; }
 
-.body-black,
-.body-white {
+.body-black {
   position: relative; }
-  .body-black::after,
-  .body-white::after {
+  .body-black::after {
     position: fixed;
     top: 0;
     left: 0;
@@ -391,9 +389,6 @@ body {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.25); }
-
-.body-white::after {
-  background-color: rgba(255, 255, 255, 0); }
 
 a {
   text-decoration: none; }
@@ -1638,43 +1633,14 @@ input {
   width: 90%;
   padding-top: 35px; }
 
-@-webkit-keyframes modal-in {
-  0% {
-    opacity: 0; }
-  70% {
-    opacity: 0.4; }
-  90% {
-    opacity: 0.8; }
-  100% {
-    opacity: 1; } }
-
-@keyframes modal-in {
-  0% {
-    opacity: 0; }
-  70% {
-    opacity: 0.4; }
-  90% {
-    opacity: 0.8; }
-  100% {
-    opacity: 1; } }
-
-.popup-show {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-animation-name: modal-in;
-          animation-name: modal-in;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s; }
-
 .swiper {
-  padding: 120px 0 53px; }
+  padding: 15px 0 53px; }
   @media (max-width: 1023px) {
     .swiper {
-      padding: 70px 0 20px; } }
+      padding: 16px 0 20px; } }
   @media (max-width: 767px) {
     .swiper {
-      padding: 60px 0 20px; } }
+      padding: 0px 0 20px; } }
 
 .swiper--card {
   padding-top: 60px;
@@ -1697,7 +1663,14 @@ input {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%; }
+  width: 100%;
+  padding-bottom: 60px; }
+  @media (max-width: 1023px) {
+    .swiper__box {
+      padding-bottom: 55px; } }
+  @media (max-width: 767px) {
+    .swiper__box {
+      padding-bottom: 44px; } }
 
 .swiper__box p {
   text-align: center;
@@ -1837,7 +1810,7 @@ input {
 .swiper-button-nex,
 .swiper-button-pre {
   position: absolute;
-  top: 0;
+  top: 149px;
   right: 0;
   z-index: 100;
   width: 30px;
@@ -1854,6 +1827,7 @@ input {
   @media (max-width: 1023px) {
     .swiper-button-nex,
     .swiper-button-pre {
+      top: 95px;
       width: 37px;
       height: 16px;
       background-image: url("../img/icon-right-tablet.svg"); } }
@@ -1871,6 +1845,10 @@ input {
     .swiper-button-pre {
       background-image: url("../img/icon-left-tablet.svg"); } }
 
+.swiper--card .swiper-button-nex,
+.swiper--card .swiper-button-pre {
+  top: 43px; }
+
 .swiper-container button {
   background: none;
   border: none;
@@ -1878,15 +1856,8 @@ input {
   padding: 10px;
   cursor: pointer; }
 
-@media (max-width: 1023px) {
-  .swiper--card .swiper-container {
-    padding-top: 97px;
-    margin-top: -48px; } }
-
-@media (max-width: 767px) {
-  .swiper--card .swiper-container {
-    padding-top: 87px;
-    margin-top: -48px; } }
+.swiper--card .swiper-container {
+  padding-top: 0; }
 
 .swiper-wrapper {
   min-height: 435px;
@@ -1897,22 +1868,20 @@ input {
       min-height: 380px; } }
   @media (max-width: 1023px) {
     .swiper-wrapper {
-      min-height: 482px; } }
+      min-height: 481px; } }
   @media (max-width: 767px) {
     .swiper-wrapper {
       min-height: 285px; } }
 
 .swiper-container {
   width: 100%;
-  padding-top: 105px;
-  margin-top: -46px; }
+  padding-top: 105px; }
   @media (max-width: 1023px) {
     .swiper-container {
-      padding-top: 97px;
-      margin-top: -43px; } }
+      padding-top: 55px; } }
   @media (max-width: 767px) {
     .swiper-container {
-      padding-top: 87px; } }
+      padding-top: 60px; } }
 
 .blog ul {
   list-style: none; }
@@ -3391,11 +3360,14 @@ input {
   list-style: none; }
 
 .popup-addtocart {
+  display: none; }
+
+.popup-addtocart__wrapper {
   position: fixed;
   left: calc(50% - 250px);
   top: 100px;
   z-index: 130;
-  display: none;
+  display: block;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -3414,7 +3386,7 @@ input {
           box-shadow: 0 4px 32px rgba(121, 121, 121, 0.24);
   background-color: #ffffff; }
   @media (max-width: 767px) {
-    .popup-addtocart {
+    .popup-addtocart__wrapper {
       width: 290px;
       left: calc(50% - 145px);
       top: 115px;
@@ -3649,19 +3621,26 @@ input {
       right: 15px;
       top: 15px; } }
 
+@-webkit-keyframes modal-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 @keyframes modal-in {
   0% {
-    -webkit-transform: translateY(-2000px);
-            transform: translateY(-2000px); }
-  70% {
-    -webkit-transform: translateY(-2000px);
-            transform: translateY(-2000px); }
-  90% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px); }
+    opacity: 0; }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0); } }
+    opacity: 1; } }
+
+.popup-show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation-name: modal-in;
+          animation-name: modal-in;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s; }
 
 .nojs .popup-log {
   display: -webkit-box;

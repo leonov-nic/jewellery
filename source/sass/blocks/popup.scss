@@ -226,27 +226,3 @@
   width: 90%;
   padding-top: 35px;
 }
-
-@keyframes modal-in {
-  0% {
-    opacity: 0;
-  }
-
-  70% {
-    opacity: 0.4;
-  }
-
-  90% {
-    opacity: 0.8;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.popup-show {
-  display: flex;
-  animation-name: modal-in;
-  animation-duration: 0.5s;
-}
