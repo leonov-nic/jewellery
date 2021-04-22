@@ -5,7 +5,7 @@
   var form = document.querySelector(".popup-log form");
   var storageMail = "";
   var isStorageSupport = "true";
-  var html = document.querySelector("html");
+  var body = document.querySelector("body");
   var popupLogin = document.querySelector(".popup-log");
   var popupCard = document.querySelector(".popup-addtocart");
   var popupClose = document.querySelectorAll(".js-close");
@@ -57,7 +57,7 @@
     var element = document.querySelector(".body-black");
     let popups = document.querySelectorAll(".popup-log, .popup-addtocart");
     element.remove();
-    html.style.overflow = "auto";
+    body.style.overflow = "auto";
 
     if (popupLogin || popupCard) {
       for (var i = 0; i < popups.length; i++) {
@@ -85,7 +85,7 @@
       setStorage();
     }
 
-    html.style.overflow = "hidden";
+    body.style.overflow = "hidden";
 
     element.addEventListener("click", closePopup);
     for (var i = 0; i < popupClose.length; i++) {

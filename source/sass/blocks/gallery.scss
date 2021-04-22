@@ -7,11 +7,11 @@
   padding: 45px 0 100px;
 
   @media (max-width: $tablet-width-only) {
-    padding: 32px 0 63px;
+    padding: 32px 0 70px;
   }
 
   @media (max-width: $mobile-width-only) {
-    padding: 17px 0 50px;
+    padding: 17px 0 55px;
   }
 }
 
@@ -49,12 +49,13 @@
   text-align: center;
   color: $black;
   margin: 0;
+  padding-bottom: 5px;
 
   &::after {
     position: absolute;
     transition: 0.5s;
     left: 0;
-    bottom: -5px;
+    bottom: 0;
     content: "";
     width: 100%;
     height: 1px;

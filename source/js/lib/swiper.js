@@ -3,32 +3,21 @@
 (function () {
   var swiperContainer = document.querySelector(".swiper-container");
 
-  $(document).ready(function() {
+  // $(document).ready(function() {
 
-    var openItems = function () {
-      $(".faq__item").children('p').slideUp(200).removeClass('faq__item--opened');
-      $(".faq__item").removeClass('faq__item--opened');
-      $(".faq__item").addClass('faq__item--closed');
+  //   var openItems = function () {
+  //     $(".faq__item").children('p').slideUp(200).removeClass('faq__item--opened');
+  //     $(".faq__item").removeClass('faq__item--opened');
+  //     $(".faq__item").addClass('faq__item--closed');
 
-      $(this).children('p').slideDown(200).removeClass('faq__item--closed');
-      $(this).removeClass('faq__item--closed');
-      $(this).addClass('faq__item--opened');
-    }
+  //     $(this).children('p').slideDown(200).removeClass('faq__item--closed');
+  //     $(this).removeClass('faq__item--closed');
+  //     $(this).addClass('faq__item--opened');
+  //   }
 
-    var openFiltertField = function () {
-      $("fieldset").children('.catalog__fields-box').slideUp(200).removeClass('catalog__js-opened');
-      $("fieldset").removeClass('catalog__js-opened');
-      $("fieldset").addClass('catalog__js-closed');
+  //   $(".faq__item").on("click", openItems);
 
-      $(this).next('.catalog__fields-box').slideDown(200).removeClass('catalog__js-closed');
-      $(this).parents('fieldset').removeClass('catalog__js-closed');
-      $(this).parents('fieldset').addClass('catalog__js-opened');
-    }
-
-    $(".faq__item").on("click", openItems);
-    $("fieldset h3").on("click", openFiltertField);
-
-  });
+  // });
 
   if (swiperContainer) {
 

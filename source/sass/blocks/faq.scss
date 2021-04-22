@@ -72,15 +72,15 @@
   }
 }
 
-.faq__item--closed p {
+.js-closed p {
   display: none;
 }
 
-.faq__item--opened p {
+.js-opened p {
   display: block;
 }
 
-.faq__item--opened svg {
+.js-opened svg {
   transform: rotate(180deg);
   transition: 0.5s;
 }

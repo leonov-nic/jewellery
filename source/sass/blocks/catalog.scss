@@ -454,15 +454,15 @@
   }
 }
 
-.catalog__js-opened .catalog__fields-box {
+.js-opened .catalog__fields-box {
   display: block;
 }
 
-.catalog__js-closed .catalog__fields-box {
+.js-closed .catalog__fields-box {
   display: none;
 }
 
-.catalog__js-opened svg {
+.js-opened svg {
   transform: rotate(180deg);
   transition: 0.5s;
 }
