@@ -18,7 +18,7 @@
 }
 
 .page-header__wrapper--catalog {
-  padding-top: 15px;
+  padding-top: 7px;
 }
 
 .page-header__first-box {
@@ -51,7 +51,21 @@
   }
 }
 
-.page-header__first-box--card > form {
+.page-header__first-box--card,
+.page-header__first-box--catalog {
+  @media (max-width: $tablet-width-only) {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.page-header__first-box--card > form,
+.page-header__first-box--catalog > form {
   padding-top: 10px;
 }
 
@@ -116,7 +130,8 @@ form {
   }
 }
 
-.page-header__list-log--card {
+.page-header__list-log--card,
+.page-header__list-log--catalog {
   padding-top: 10px;
 
   @media (max-width: $tablet-width-only) {
@@ -192,6 +207,14 @@ form {
 
   @media (max-width: $mobile-width-only) {
     padding-top: 60px;
+  }
+}
+
+.page-header__nav--catalog {
+  margin-top: 8px;
+
+  @media (max-width: $tablet-width-only) {
+    margin-top: 0;
   }
 }
 
@@ -378,33 +401,33 @@ form {
 .page-header__second-box {
   width: 100%;
   background-color: $brown;
-  background-image: linear-gradient( rgba($brown-dark, 0.7)), url("../img/mainbg-desktop@1x.jpg");
+  background-image: linear-gradient(rgba($brown-dark, 0.7)), url("../img/mainbg-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 463px;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 
   @media (min-resolution: $retina-dppx) {
-    background-image: linear-gradient( rgba($brown-dark, 0.7)), url("../img/mainbg-desktop@2x.jpg");
+    background-image: linear-gradient(rgba($brown-dark, 0.7)), url("../img/mainbg-desktop@2x.jpg");
   }
 
   @media (max-width: $tablet-width-only) {
     filter: none;
-    background-image: linear-gradient( rgba($brown-dark, 0.7)), url("../img/mainbg-tablet@1x.jpg");
+    background-image: linear-gradient(rgba($brown-dark, 0.7)), url("../img/mainbg-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: linear-gradient( rgba($brown-dark, 0.7)), url("../img/mainbg-tablet@2x.jpg");
+      background-image: linear-gradient(rgba($brown-dark, 0.7)), url("../img/mainbg-tablet@2x.jpg");
     }
   }
 
   @media (max-width: $mobile-width-only) {
-    background-image: linear-gradient( rgba($brown-dark, 0.7)), url("../img/mainbg-mobile@1x.jpg");
+    background-image: linear-gradient(rgba($brown-dark, 0.7)), url("../img/mainbg-mobile@1x.jpg");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: linear-gradient( rgba($brown-dark, 0.7)), url("../img/mainbg-mobile@2x.jpg");
+      background-image: linear-gradient(rgba($brown-dark, 0.7)), url("../img/mainbg-mobile@2x.jpg");
     }
   }
 }
@@ -417,11 +440,11 @@ form {
   min-height: 261px;
   background-size: cover;
   background-position: center center;
-  background-image: linear-gradient( rgba($brown-dark, 0.7)), url("../img/catalogbg-desktop@1x.jpg");
+  background-image: linear-gradient(rgba($brown-dark, 0.7)), url("../img/catalogbg-desktop@1x.jpg");
   filter: none;
 
   @media (min-resolution: $retina-dppx) {
-    background-image: linear-gradient( rgba($brown-dark, 0.7)), url("../img/catalogbg-desktop@2x.jpg");
+    background-image: linear-gradient(rgba($brown-dark, 0.7)), url("../img/catalogbg-desktop@2x.jpg");
   }
 
   @media (max-width: 1366px) {
@@ -430,20 +453,20 @@ form {
 
   @media (max-width: $tablet-width-only) {
     background-size: cover;
-    background-image: linear-gradient( rgba($brown-dark, 0.7)), url("../img/catalogbg-tablet@1x.jpg");
+    background-image: linear-gradient(rgba($brown-dark, 0.7)), url("../img/catalogbg-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: linear-gradient( rgba($brown-dark, 0.7)), url("../img/catalogbg-tablet@2x.jpg");
+      background-image: linear-gradient(rgba($brown-dark, 0.7)), url("../img/catalogbg-tablet@2x.jpg");
     }
   }
 
   @media (max-width: $mobile-width-only) {
     padding-left: 20px;
     padding-right: 20px;
-    background-image: linear-gradient( rgba($brown-dark, 0.7)), url("../img/catalogbg-mobile@1x.jpg");
+    background-image: linear-gradient(rgba($brown-dark, 0.7)), url("../img/catalogbg-mobile@1x.jpg");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: linear-gradient( rgba($brown-dark, 0.7)), url("../img/catalogbg-mobile@2x.jpg");
+      background-image: linear-gradient(rgba($brown-dark, 0.7)), url("../img/catalogbg-mobile@2x.jpg");
     }
   }
 }

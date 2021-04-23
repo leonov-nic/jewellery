@@ -121,16 +121,6 @@ input {
   }
 }
 
-.catalog .container {
-  @media (max-width: $tablet-width-only) {
-    padding: 0 35px;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    padding: 0 15px;
-  }
-}
-
 .container {
   max-width: 1260px;
   margin: 0 auto;
