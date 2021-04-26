@@ -220,22 +220,30 @@ form {
 
 .page-header__list-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   padding: 0;
-  padding-left: 14px;
+  padding-left: 38px;
   margin: 0 auto;
-  width: 530px;
+  width: 580px;
 
   @media (max-width: $tablet-width-only) {
     width: 100%;
     margin: 0;
+    padding-left: 14px;
     flex-direction: column;
   }
 }
 
 .page-header__item-nav {
+  margin-right: 11px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
   @media (max-width: $tablet-width-only) {
+    margin-right: 0;
     margin-bottom: 21px;
   }
 }

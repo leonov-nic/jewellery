@@ -177,9 +177,14 @@
 .swiper-pagination-bullet {
   width: 14px;
   height: 14px;
+  transition: 0.5s;
   text-align: center;
   line-height: 20px;
   color: #9b9997;
+
+  &:hover {
+    color: #a87b62;
+  }
 
   @include font(16px, 21px, 500);
 

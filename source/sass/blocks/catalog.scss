@@ -484,6 +484,29 @@
   transition: 0.5s;
 }
 
+.catalog--nojs form {
+  transform: translateX(0);
+  position: relative;
+  width: 100%;
+  left: 0;
+}
+
+.catalog--nojs .catalog__wrapper > button {
+  display: none;
+}
+
+.catalog--nojs .catalog__fields-box {
+  display: block;
+}
+
+.catalog--nojs svg {
+  transform: rotate(180deg);
+}
+
+.catalog--nojs .catalog__close-filter {
+  display: none;
+}
+
 .catalog__list {
   width: 100%;
   display: flex;

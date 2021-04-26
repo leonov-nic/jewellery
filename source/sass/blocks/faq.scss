@@ -129,6 +129,10 @@
   border: 1px solid $brown;
   cursor: pointer;
 
+  &:focus {
+    background-color: $gray-light;
+  }
+
   @media (max-width: $tablet-width-only) {
     padding-right: 12%;
     padding-bottom: 44px;
@@ -138,4 +142,20 @@
     padding: 15px;
     padding-bottom: 20px;
   }
+}
+
+.faq__item button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0;
+}
+
+.faq--nojs .js-closed p {
+  display: block;
+}
+
+.faq--nojs .js-closed svg {
+  transform: rotate(180deg);
 }

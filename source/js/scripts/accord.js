@@ -4,11 +4,21 @@
 
   var headings = document.querySelectorAll("fieldset h3");
   var fields = document.querySelectorAll(".catalog fieldset");
+  var catalogPage = document.querySelector(".catalog");
   var items = document.querySelectorAll(".faq__item");
+  var faq = document.querySelector(".faq");
   var classClosed = "js-closed";
   var classOpened = "js-opened";
 
-  function onOpenCloseMenu (list, classclosed, classopened) {
+  if (faq) {
+    faq.classList.remove("faq--nojs");
+  }
+
+  if (catalogPage) {
+    catalogPage.classList.remove("catalog--nojs");
+  }
+
+  function onOpenCloseMenu(list, classclosed, classopened) {
     if (list.classList.contains(classclosed)) {
       list.classList.remove(classclosed);
       list.classList.add(classopened);
@@ -16,7 +26,7 @@
       list.classList.add(classclosed);
       list.classList.remove(classopened);
     }
-  };
+  }
 
   var openCloseLists = function (toggle, list, lists, classclosed, classopened) {
 
@@ -43,8 +53,8 @@
   }
 
   if (items) {
-    for (var i = 0; i < items.length; i++) {
-      openCloseLists(items[i], items[i], items, classClosed, classOpened);
+    for (var j = 0; j < items.length; j++) {
+      openCloseLists(items[j], items[j], items, classClosed, classOpened);
     }
   }
 

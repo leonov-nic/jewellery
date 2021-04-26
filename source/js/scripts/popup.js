@@ -13,7 +13,7 @@
   var popupOpenCardButton = document.querySelector(".button--js-card");
   var KEY_ESCAPE = "Escape";
 
-  function isEscPress (evt) {
+  function isEscPress(evt) {
     if (evt.key === KEY_ESCAPE) {
       evt.preventDefault();
       closePopup();
@@ -23,20 +23,19 @@
   var setStorage = function () {
     try {
       storageMail = localStorage.getItem("storageMail");
-    }
-    catch (err) {
+    } catch (err) {
       isStorageSupport = "false";
     }
 
     if (storageMail) {
       popupMail.value = storageMail;
 
-      setTimeout(function() {
+      setTimeout(function () {
         popupMail.focus();
       }, 0);
 
     } else {
-      setTimeout(function() {
+      setTimeout(function () {
         popupMail.focus();
       }, 0);
     }
@@ -53,9 +52,9 @@
     });
   }
 
-  function closePopup () {
+  function closePopup() {
     var element = document.querySelector(".body-black");
-    let popups = document.querySelectorAll(".popup-log, .popup-addtocart");
+    var popups = document.querySelectorAll(".popup-log, .popup-addtocart");
     element.remove();
     body.style.overflow = "auto";
 
@@ -66,13 +65,13 @@
     }
 
     element.removeEventListener("click", closePopup);
-    for (var i = 0; i < popupClose.length; i++) {
-      popupClose[i].removeEventListener("click", closePopup);
+    for (var j = 0; j < popupClose.length; j++) {
+      popupClose[j].removeEventListener("click", closePopup);
     }
     document.removeEventListener("keydown", isEscPress);
   }
 
-  function openPopup (popup) {
+  function openPopup(popup) {
     var element = document.createElement("div");
     element.className = "body-black";
     document.body.appendChild(element);
@@ -97,7 +96,7 @@
   var openPopupLogin = function (evt) {
     evt.preventDefault();
     openPopup(popupLogin);
-  }
+  };
 
   if (popupOpenLogButtons) {
     for (var i = 0; i < popupOpenLogButtons.length; i++) {
@@ -109,7 +108,7 @@
   var openPopupCard = function (evt) {
     evt.preventDefault();
     openPopup(popupCard);
-  }
+  };
 
   if (popupOpenCardButton) {
     popupOpenCardButton.removeEventListener("click", openPopupCard);

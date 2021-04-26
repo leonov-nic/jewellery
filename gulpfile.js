@@ -103,8 +103,8 @@ gulp.task("scripts-main", function() {
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/swiper/**",
     "source/js/*.js",
+    "source/swiper/**",
     // "source/img/**",
     "source//*.ico"
     ], {
