@@ -16,12 +16,12 @@
 
   @media (max-width: $tablet-width-only) {
     padding-top: 40px;
-    padding-bottom: 60px;
+    padding-bottom: 63px;
   }
 
   @media (max-width: $mobile-width-only) {
     padding-top: 40px;
-    padding-bottom: 50px;
+    padding-bottom: 52px;
   }
 }
 
@@ -97,6 +97,7 @@
 
   @media (max-width: $tablet-width-only) {
     padding-bottom: 3px;
+    margin-top: 18px;
 
     &::after {
       bottom: 0;

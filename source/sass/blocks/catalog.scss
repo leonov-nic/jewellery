@@ -60,7 +60,7 @@
     text-align: center;
     background-color: $brown;
     padding-top: 26px;
-    padding-bottom: 26px;
+    padding-bottom: 25px;
     width: 100%;
     color: $white;
   }
@@ -82,7 +82,7 @@
     transform: translateX(-600px);
     display: block;
     position: absolute;
-    top: 49px;
+    top: -360px;
     left: 50px;
   }
 
@@ -90,7 +90,7 @@
     width: 300px;
     padding-left: 10px;
     padding-right: 10px;
-    top: 40px;
+    top: -340px;
     left: calc(50% - 100px);
   }
 }
@@ -109,6 +109,10 @@
   margin: 0;
   margin-bottom: -1px;
   border: 1px solid $brown;
+
+  &:focus {
+    background-color: $gray-light;
+  }
 
   @media (max-width: $tablet-width-only) {
     border-right: none;
@@ -175,6 +179,7 @@
   margin: 0;
   padding-left: 25px;
   transition: 0.5s;
+  cursor: pointer;
 
   @include font(14px, 18px, 500);
   color: $black;
@@ -233,6 +238,10 @@
     opacity: 0.8;
   }
 
+  &:focus {
+    box-shadow: 0 0 3px 3px $brown;
+  }
+
   &::after {
     position: absolute;
     left: 0;
@@ -268,7 +277,7 @@
 .catalog__field-wrapper input[type="checkbox"]:focus + .catalog__checkbox-indicator {
   &::after {
     outline: none;
-    box-shadow: 0 0 4px 6px rgba($white, 0.3);
+    box-shadow: 0 0 3px 4px rgba($brown, 0.4);
     transition: 0.5s;
   }
 }
@@ -285,8 +294,14 @@
   outline: none;
   width: 22px;
 
+  &:focus {
+    background-color: $gray;
+  }
+
   @include font(14px, 18px, 500);
   color: $black;
+
+  border-radius: 0;
 
   -moz-appearance: textfield;
 
@@ -370,17 +385,19 @@
   transition: 0.5s;
   background-color: $brown;
   width: 15px;
-  height: 15px;
+  min-height: 15px;
   border-radius: 50%;
+  -webkit-border-radius: 50%;
+  cursor: pointer;
 
-  &:hover {
-    background-color: $gray;
+  &:focus {
+    box-shadow: 0 0 0 2px $black;
   }
 
   @media (max-width: $tablet-width-only) {
     left: 55px;
     width: 18px;
-    height: 18px;
+    min-height: 18px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -525,7 +542,7 @@
 }
 
 .catalog__item {
-  margin-bottom: 36px;
+  margin-bottom: 35px;
   text-align: center;
 
   @media (max-width: $tablet-width-only) {
@@ -611,7 +628,7 @@
   display: flex;
   justify-content: space-between;
   margin-left: auto;
-  padding-top: 29px;
+  padding-top: 31px;
 
   @media (max-width: $tablet-width-only) {
     grid-column: 1 / -1;

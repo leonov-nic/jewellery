@@ -46,9 +46,22 @@
     });
   };
 
+  var openCloseFlterFields = function (toggle, list, classclosed, classopened) {
+
+    toggle.addEventListener("click", function () {
+
+      if (list.classList.contains(classopened)) {
+        list.classList.add(classclosed);
+        list.classList.remove(classopened);
+      } else {
+        onOpenCloseMenu(list, classclosed, classopened);
+      }
+    });
+  };
+
   if (fields && headings) {
     for (var i = 0; i < fields.length; i++) {
-      openCloseLists(headings[i], fields[i], fields, classClosed, classOpened);
+      openCloseFlterFields(headings[i], fields[i], classClosed, classOpened);
     }
   }
 

@@ -13,12 +13,24 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    padding-top: 45px;
+    padding-top: 25px;
   }
 }
 
 .page-header__wrapper--catalog {
-  padding-top: 7px;
+  padding-top: 31px;
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 20px;
+  }
+}
+
+.page-header__wrapper--card {
+  padding-top: 30px;
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 20px;
+  }
 }
 
 .page-header__first-box {
@@ -38,8 +50,8 @@
 
   @media (max-width: $tablet-width-only) {
     width: 100%;
-    padding-left: 37px;
-    padding-right: 37px;
+    padding-left: 45px;
+    padding-right: 45px;
     padding-bottom: 11px;
   }
 
@@ -140,8 +152,15 @@ form {
 }
 
 .page-header__item-log {
+  padding-right: 15px;
+
   &:first-child {
     margin-right: 37px;
+    padding-right: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
   }
 }
 
@@ -373,6 +392,20 @@ form {
   }
 }
 
+.page-header__wrapper-logo--main .page-header__icon-logo {
+  &:hover {
+    transform: none;
+    stroke: none;
+    cursor: auto;
+  }
+
+  &:active {
+    transform: none;
+    stroke: none;
+    opacity: 1;
+  }
+}
+
 .page-header__icon-logo {
   transition: 0.5s;
   cursor: pointer;
@@ -492,8 +525,14 @@ form {
   text-align: center;
   color: $white;
 
+  @media (max-width: $tablet-width-only) {
+    margin-right: 20px;
+  }
+
+
   @media (max-width: $mobile-width-only) {
     @include font(34px, 42px, 400);
+    margin-right: 0;
   }
 
   &:first-child {
@@ -581,6 +620,7 @@ form {
   @media (max-width: $tablet-width-only) {
     background-color: $brown;
     transition: 0.2s;
+    width: 100vw;
   }
 }
 
@@ -604,6 +644,13 @@ form {
     z-index: 49;
     background-color: $brown;
     display: block;
+    min-height: 100vh;
+    width: 100vw;
+    margin-top: 20px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 0;
   }
 }
 

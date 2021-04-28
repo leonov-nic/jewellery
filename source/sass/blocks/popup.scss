@@ -18,12 +18,20 @@
     background-image: url("../img/log-in@2x.jpg");
   }
 
+  @media (max-width: $tablet-width-only) {
+    left: calc(50% - 221px);
+    width: 442px;
+    padding: 188px 50px 53px;
+    top: 80px;
+  }
+
   @media (max-width: $mobile-width-only) {
     background-image: url("../img/log-in-mobile@1x.jpg");
     background-size: 270px 84px;
     left: calc(50% - 135px);
     width: 270px;
     padding: 122px 15px 40px;
+    top: 50px;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/log-in-mobile@2x.jpg");
@@ -66,8 +74,9 @@
     box-shadow: 0 8px 0 0 rgba($brown, 0.5);
   }
 
-  &:focus:invalid {
-    box-shadow: 0 8px 0 0 red;
+  @media (max-width: $tablet-width-only) {
+    margin-top: 12px;
+    margin-bottom: 12px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -76,16 +85,26 @@
   }
 }
 
+.popup-log--invalid input[type="email"]  {
+  box-shadow: 0 8px 0 0 red;
+}
+
+.popup-log input[type="password"] {
+  @media (max-width: $tablet-width-only) {
+    margin-bottom: 0;
+  }
+}
+
 .popup-log a {
   @include font(12px, 18px, 500);
 
   color: $gray;
   margin: 0;
-  padding-top: 6px;
-  padding-bottom: 45px;
-  display: block;
-  text-align: right;
-  width: 100%;
+  margin-top: 6px;
+  margin-bottom: 45px;
+  display: inline-block;
+  vertical-align: top;
+  float: right;
   transition: 0.5s;
 
   &:focus {
@@ -100,9 +119,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    margin-top: -9px;
-    padding-top: 0;
-    padding-bottom: 35px;
+    margin-bottom: 35px;
   }
 }
 
@@ -180,7 +197,7 @@
   right: 20px;
   top: 20px;
   width: 16px;
-  height: 16px;
+  min-height: 16px;
   border: none;
   background: none;
   background-image: url("../img/icon-close.svg");
@@ -211,7 +228,14 @@
     box-shadow: 0 0 4px 6px rgba($white, 0.3);
   }
 
+  @media (max-width: $tablet-width-only) {
+    width: 20px;
+    height: 20px;
+  }
+
   @media (max-width: $mobile-width-only) {
+    width: 15px;
+    height: 15px;
     right: 15px;
     top: 15px;
   }

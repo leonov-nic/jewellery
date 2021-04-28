@@ -2,6 +2,7 @@
 
 (function () {
   var popupMail = document.querySelector(".popup-log [name=mail]");
+  var buttonSubmit = document.querySelector(".popup-log [type=submit]");
   var form = document.querySelector(".popup-log form");
   var storageMail = "";
   var isStorageSupport = "true";
@@ -9,7 +10,7 @@
   var popupLogin = document.querySelector(".popup-log");
   var popupCard = document.querySelector(".popup-addtocart");
   var popupClose = document.querySelectorAll(".js-close");
-  var popupOpenLogButtons = document.querySelectorAll(".page-header__log");
+  var popupOpenLogButtons = document.querySelectorAll(".page-header__log, .page-header__toggle--input");
   var popupOpenCardButton = document.querySelector(".button--js-card");
   var KEY_ESCAPE = "Escape";
 
@@ -41,13 +42,36 @@
     }
   };
 
-  if (form) {
+  if (popupMail) {
+    if (popupLogin.classList.contains("popup-log--invalid")) {
+      popupLogin.classList.remove("popup-log--invalid");
+    }
+    popupMail.addEventListener("input", function () {
+      if (popupMail.value && popupLogin.classList.contains("popup-log--invalid")) {
+        popupLogin.classList.remove("popup-log--invalid");
+      }
+    });
+  }
+
+  if (form && popupMail) {
+
     form.addEventListener("submit", function (evt) {
-      evt.preventDefault();
       if (popupMail.value) {
         if (isStorageSupport) {
           localStorage.setItem("storageMail", popupMail.value);
         }
+      } else {
+        evt.preventDefault();
+      }
+    });
+  }
+
+  if (buttonSubmit) {
+    buttonSubmit.addEventListener("click", function (evt) {
+      if (!popupMail.value) {
+        popupLogin.classList.add("popup-log--invalid");
+      } else {
+        popupLogin.classList.remove("popup-log--invalid");
       }
     });
   }
@@ -57,6 +81,7 @@
     var popups = document.querySelectorAll(".popup-log, .popup-addtocart");
     element.remove();
     body.style.overflow = "auto";
+    body.style.position = "";
 
     if (popupLogin || popupCard) {
       for (var i = 0; i < popups.length; i++) {
@@ -85,6 +110,7 @@
     }
 
     body.style.overflow = "hidden";
+    body.style.position = "fixed";
 
     element.addEventListener("click", closePopup);
     for (var i = 0; i < popupClose.length; i++) {

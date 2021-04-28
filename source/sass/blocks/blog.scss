@@ -68,6 +68,10 @@
   @media (max-width: $tablet-width-only) {
     margin-top: 18px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 20px;
+  }
 }
 
 .blog__wrapper {
@@ -245,8 +249,8 @@
     width: 100%;
     margin-left: 0;
     margin-top: auto;
-    padding-top: 88px;
-    padding-bottom: 54px;
+    padding-top: 90px;
+    padding-bottom: 50px;
   }
 }
 
@@ -274,7 +278,7 @@
   color: $black;
 
   @media (max-width: $tablet-width-only) {
-    margin-bottom: 2px;
+    margin-bottom: 4px;
   }
 }
 
