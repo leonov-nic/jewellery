@@ -67,7 +67,7 @@
   }
 
   if (buttonSubmit) {
-    buttonSubmit.addEventListener("click", function (evt) {
+    buttonSubmit.addEventListener("click", function () {
       if (!popupMail.value) {
         popupLogin.classList.add("popup-log--invalid");
       } else {

@@ -85,7 +85,7 @@
 
           <form action="echo/htmlacademy.ru" method="POST" enctype="multipart/form-data">
             <label class="visually-hidden" for="search">Site search</label>
-            <input type="search" id="search" name="search" placeholder="Type here to search">
+            <input type="search" id="search" name="search" placeholder="Type here to search" required="">
           </form>
 
           <div class="page-header__wrapper-logo">
@@ -116,7 +116,7 @@
         <nav class="page-header__nav page-header__nav--card">
           <ul class="page-header__list-nav">
             <li class="page-header__item-nav">
-              <a href="#">What’s new</a>
+              <a href="#">What's new</a>
             </li>
             <li class="page-header__item-nav">
               <a href="#">Chokers</a>
@@ -394,7 +394,7 @@
             <p>News and updates from CH. No spam, we promise.</p>
             <form>
               <label class="visually-hidden" for="email">Your e-mail</label>
-              <input type="email" id="email" name="email" placeholder="Your E-mail">
+              <input type="email" id="email" name="email" placeholder="Your E-mail" required="">
               <button type="submit" aria-label="Send form">Sign Up</button>
             </form>
           </div>
@@ -485,7 +485,11 @@
         <p>Don’t have an account?</p>
         <a href="#">Sign up</a>
       </div>
-      <button class="popup-log__close js-close" type="button" aria-label="Close form"></button>
+      <button class="popup-log__close js-close" type="button" aria-label="Close form">
+        <svg role="img" class="popup-log__icon-close" width="14" height="14">
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </button>
     </div>
 
     <div class="popup-addtocart">

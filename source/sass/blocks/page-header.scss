@@ -411,13 +411,13 @@ form {
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     stroke: $brown;
     transition: 0.5s;
   }
 
   &:active {
-    transform: scale(1.2);
+    transform: scale(1.1);
     stroke: $brown;
     transition: 0.2s;
     opacity: 0.3;

@@ -82,7 +82,7 @@
     transform: translateX(-600px);
     display: block;
     position: absolute;
-    top: -360px;
+    top: -340px;
     left: 50px;
   }
 
@@ -90,7 +90,7 @@
     width: 300px;
     padding-left: 10px;
     padding-right: 10px;
-    top: -340px;
+    top: -330px;
     left: calc(50% - 100px);
   }
 }
@@ -120,6 +120,7 @@
     padding: 34px 40px 33px;
     border-top: none;
     margin-bottom: 0;
+    overflow-y: auto;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -375,45 +376,60 @@
   }
 }
 
-.catalog__line-box button {
+.catalog__line-button {
   position: absolute;
-  left: 45px;
-  top: -7px;
-  border: none;
-  background: none;
-  outline: none;
+  left: 0;
+  top: 0;
+  margin: 0;
   transition: 0.5s;
-  background-color: $brown;
-  width: 15px;
-  min-height: 15px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
   cursor: pointer;
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    left: 45px;
+    top: -7px;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    background-color: $brown;
+  }
 
   &:focus {
     box-shadow: 0 0 0 2px $black;
   }
 
   @media (max-width: $tablet-width-only) {
-    left: 55px;
-    width: 18px;
-    min-height: 18px;
+    &::after {
+      width: 18px;
+      height: 18px;
+      left: 55px;
+    }
   }
 
   @media (max-width: $mobile-width-only) {
-    left: 30px;
+    &::after {
+      left: 30px;
+    }
   }
 }
 
-.catalog__line-box .catalog__line-button-second {
-  left: 150px;
+.catalog__line-box .catalog__line-button--second {
+  &::after {
+    left: 150px;
+  }
 
   @media (max-width: $tablet-width-only) {
-    left: 231px;
+    &::after {
+      left: 231px;
+    }
   }
 
   @media (max-width: $mobile-width-only) {
-    left: 168px;
+    &::after {
+      left: 168px;
+    }
   }
 }
 
@@ -710,8 +726,8 @@
     fill: $black;
     transition: 0.5s;
     position: absolute;
-    right: -21px;
-    top: -21px;
+    right: -18px;
+    top: -18px;
     z-index: 100;
 
     &:hover {
@@ -720,7 +736,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    right: -5px;
+    right: -16px;
     top: -16px;
   }
 }
