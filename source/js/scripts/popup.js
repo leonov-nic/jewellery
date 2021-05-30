@@ -142,7 +142,7 @@
     openPopup(popupCard);
   };
 
-  if (popupOpenCardButton) {
+  if (popupOpenCardButton && popupCard) {
     popupOpenCardButton.removeEventListener("click", openPopupCard);
     popupOpenCardButton.addEventListener("click", openPopupCard);
   }

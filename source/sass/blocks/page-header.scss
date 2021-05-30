@@ -639,7 +639,7 @@ form {
 .page-header--opened .page-header__nav {
   @media (max-width: $tablet-width-only) {
     position: absolute;
-    top: 156px;
+    top: 128px;
     left: 0;
     z-index: 49;
     background-color: $brown;
@@ -650,8 +650,28 @@ form {
   }
 
   @media (max-width: $mobile-width-only) {
-    top: 130px;
+    top: 145px;
     height: 100%;
+  }
+}
+
+.page-header--opened .page-header__nav--catalog {
+  @media (max-width: $tablet-width-only) {
+    top: 168px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    top: 140px;
+  }
+}
+
+.page-header--opened .page-header__nav--card {
+  @media (max-width: $tablet-width-only) {
+    top: 156px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    top: 130px;
   }
 }
 
