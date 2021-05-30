@@ -75,6 +75,7 @@
   transition: 0.5s;
   z-index: 99;
 
+
   @media (max-width: $tablet-width-only) {
     width: 442px;
     padding-bottom: 12px;
@@ -97,9 +98,11 @@
 
 .catalog--active-filter form {
   transform: translateX(-60px);
+  padding-bottom: 50px;
 
   @media (max-width: $mobile-width-only) {
     transform: translateX(-45px);
+    padding-bottom: 25px;
   }
 }
 
@@ -127,20 +130,6 @@
     padding: 26px 40px 22px;
     padding-right: 30px;
     padding-left: 20px;
-  }
-}
-
-.catalog .catalog__fieldset-prise {
-  padding-bottom: 10px;
-
-  @media (max-width: $tablet-width-only) {
-    padding: 33px 40px 34px;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    padding: 24px 40px 22px;
-    padding-left: 20px;
-    padding-right: 0;
   }
 }
 
@@ -714,6 +703,15 @@
 
   @media (max-width: $tablet-width-only) {
     display: block;
+    position: absolute;
+    right: -40px;
+    top: -44px;
+    z-index: 100;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    right: -20px;
+    top: -36px;
   }
 }
 
@@ -725,18 +723,10 @@
     height: 42px;
     fill: $black;
     transition: 0.5s;
-    position: absolute;
-    right: -18px;
-    top: -18px;
-    z-index: 100;
 
     &:hover {
       fill: $brown;
     }
   }
 
-  @media (max-width: $mobile-width-only) {
-    right: -16px;
-    top: -16px;
-  }
 }

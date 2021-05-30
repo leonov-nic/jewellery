@@ -17,6 +17,8 @@
       headerForm.classList.add("page-header__menu-search");
       body.style.overflow = "hidden";
       body.style.position = "fixed";
+      nav.style.overflowY = "scroll";
+      nav.style.height = "100%";
     } else {
       header.classList.add("page-header--closed");
       header.classList.remove("page-header--opened");
@@ -24,6 +26,8 @@
       headerForm.classList.remove("page-header__menu-search");
       body.style.overflow = "auto";
       body.style.position = "";
+      nav.style.overflowY = "auto";
+      nav.style.height = "auto";
     }
   }
 

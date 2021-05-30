@@ -80,7 +80,7 @@
     var element = document.querySelector(".body-black");
     var popups = document.querySelectorAll(".popup-log, .popup-addtocart");
     element.remove();
-    body.style.overflow = "auto";
+    body.style.overflowY = "auto";
     body.style.position = "";
 
     if (popupLogin || popupCard) {
@@ -109,8 +109,14 @@
       setStorage();
     }
 
-    body.style.overflow = "hidden";
+    body.style.overflowY = "hidden";
     body.style.position = "fixed";
+
+    if (window.screen.width <= 1023 && window.screen.height <= 615) {
+      popup.style.overflowY = "scroll";
+      popup.style.height = "100%";
+      popup.style.top = "0";
+    }
 
     element.addEventListener("click", closePopup);
     for (var i = 0; i < popupClose.length; i++) {

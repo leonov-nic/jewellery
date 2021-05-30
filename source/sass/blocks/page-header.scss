@@ -639,18 +639,19 @@ form {
 .page-header--opened .page-header__nav {
   @media (max-width: $tablet-width-only) {
     position: absolute;
-    top: 117px;
+    top: 156px;
     left: 0;
     z-index: 49;
     background-color: $brown;
     display: block;
     min-height: 100vh;
     width: 100vw;
-    margin-top: 20px;
+    padding-bottom: 180px;
   }
 
   @media (max-width: $mobile-width-only) {
-    margin-top: 0;
+    top: 130px;
+    height: 100%;
   }
 }
 
